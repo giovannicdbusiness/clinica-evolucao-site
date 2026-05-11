@@ -290,18 +290,33 @@ export default function Layout() {
         <Outlet />
       </main>
 
-      {/* WhatsApp floating button */}
-      <a
-        href={clinic.whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white flex items-center justify-center shadow-elevation-3 transition-all duration-200 hover:shadow-2xl cursor-pointer group"
-        aria-label="Falar pelo WhatsApp"
-      >
-        <MessageCircle size={26} className="transition-transform duration-200 group-hover:scale-110" />
-        <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full animate-ping" />
-        <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full" />
-      </a>
+      {/* Floating action buttons - WhatsApp + Instagram */}
+      <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+        <a
+          href={clinic.instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-14 h-14 rounded-full text-white flex items-center justify-center shadow-elevation-3 transition-all duration-200 hover:shadow-2xl hover:scale-105 cursor-pointer group"
+          style={{
+            background:
+              'linear-gradient(45deg, #feda75 0%, #fa7e1e 25%, #d62976 50%, #962fbf 75%, #4f5bd5 100%)',
+          }}
+          aria-label="Seguir no Instagram"
+        >
+          <Instagram size={24} className="transition-transform duration-200 group-hover:scale-110" />
+        </a>
+        <a
+          href={clinic.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white flex items-center justify-center shadow-elevation-3 transition-all duration-200 hover:shadow-2xl hover:scale-105 cursor-pointer group"
+          aria-label="Falar pelo WhatsApp"
+        >
+          <MessageCircle size={26} className="transition-transform duration-200 group-hover:scale-110" />
+          <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full animate-ping" />
+          <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full" />
+        </a>
+      </div>
 
       {/* Footer */}
       <footer

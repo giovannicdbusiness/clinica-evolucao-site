@@ -26,9 +26,9 @@ export default function Perseveranca() {
 
   const stats = [
     { icon: Calendar, value: 'Nova', label: 'Unidade', description: 'Inaugurada recentemente' },
-    { icon: Trees, value: '100%', label: 'Área arborizada', description: 'Ambiente em meio à natureza' },
+    { icon: Trees, value: '100%', countUpTo: 100, countUpSuffix: '%', label: 'Área arborizada', description: 'Ambiente em meio à natureza' },
     { icon: Stethoscope, value: '24h', label: 'Atendimento', description: 'Equipe sempre disponível' },
-    { icon: Users, value: '+15', label: 'Profissionais', description: 'Equipe multidisciplinar' },
+    { icon: Users, value: '+15', countUpTo: 15, countUpPrefix: '+', label: 'Profissionais', description: 'Equipe multidisciplinar' },
   ];
 
   return (
@@ -66,12 +66,12 @@ export default function Perseveranca() {
                 Itapetininga · SP
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-[1.15] tracking-tight">
-                Sobre a Clínica{' '}
+                Sobre o Centro Terapêutico{' '}
                 <span style={{ color: theme.primary }}>Perseverança</span>
               </h2>
               <div className="space-y-5 text-gray-600 text-base md:text-lg leading-relaxed">
                 <p>
-                  Localizada em <strong>Itapetininga</strong>, a Clínica Perseverança nasce com
+                  Localizada em <strong>Itapetininga</strong>, a Centro Terapêutico Perseverança nasce com
                   o propósito de expandir nosso compromisso com a vida e a recuperação.
                 </p>
                 <p>
@@ -234,7 +234,7 @@ export default function Perseveranca() {
       />
 
       <TriagemForm
-        title="Triagem Clínica Perseverança"
+        title="Triagem Centro Terapêutico Perseverança"
         subtitle="Dê o primeiro passo rumo à recuperação em nossa nova unidade. Preencha os dados abaixo para uma avaliação inicial."
         clinicName={clinic.shortName}
         whatsappUrl={clinic.whatsappUrl}
@@ -256,7 +256,7 @@ export default function Perseveranca() {
 
       <FAQ
         title="Dúvidas frequentes sobre a nova unidade"
-        subtitle="Respostas para as principais dúvidas sobre a Clínica Perseverança."
+        subtitle="Respostas para as principais dúvidas sobre a Centro Terapêutico Perseverança."
         items={clinic.faq}
         primaryColor={theme.primary}
         surface={theme.surface}
@@ -286,7 +286,7 @@ export default function Perseveranca() {
             Um novo começo está mais perto do que você imagina.
           </h2>
           <p className="text-white/90 text-base md:text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-            Entre em contato com a Clínica Perseverança e descubra como podemos ajudar você ou seu
+            Entre em contato com a Centro Terapêutico Perseverança e descubra como podemos ajudar você ou seu
             ente querido a iniciar uma nova jornada de vida.
           </p>
           <a

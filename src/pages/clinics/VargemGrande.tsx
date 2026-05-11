@@ -26,10 +26,10 @@ export default function VargemGrande() {
   const { theme } = clinic;
 
   const stats = [
-    { icon: Calendar, value: '+10', label: 'Anos atuando', description: 'Tradição em recuperação' },
-    { icon: Users, value: '+1.000', label: 'Pacientes', description: 'Vidas transformadas' },
+    { icon: Calendar, value: '+16', countUpTo: 16, countUpPrefix: '+', label: 'Anos atuando', description: 'Tradição em recuperação' },
+    { icon: Users, value: '+1.000', countUpTo: 1000, countUpPrefix: '+', label: 'Pacientes', description: 'Vidas transformadas' },
     { icon: Stethoscope, value: '24h', label: 'Atendimento', description: 'Equipe disponível sempre' },
-    { icon: Award, value: '+25', label: 'Profissionais', description: 'Equipe multidisciplinar' },
+    { icon: Award, value: '+25', countUpTo: 25, countUpPrefix: '+', label: 'Profissionais', description: 'Equipe multidisciplinar' },
   ];
 
   const equipe = [
@@ -70,7 +70,7 @@ export default function VargemGrande() {
         primaryColor={theme.primary}
         primaryDark={theme.primaryDark}
         accentColor={theme.accent}
-        badge="Unidade Vargem Grande"
+        badge="Unidade Vargem Grande Paulista"
         trustSignals={['Equipe multidisciplinar', 'Ambiente seguro 24h', 'Diárias a partir de R$ 3.500']}
       />
 
@@ -97,7 +97,7 @@ export default function VargemGrande() {
               </h2>
               <div className="space-y-5 text-gray-600 text-base md:text-lg leading-relaxed">
                 <p>
-                  A unidade Vargem Grande é especializada no tratamento de dependência química,
+                  A unidade Vargem Grande Paulista é especializada no tratamento de dependência química,
                   alcoolismo e transtornos psiquiátricos. Nosso compromisso é com a recuperação
                   integral do paciente e o reencontro com a família.
                 </p>
@@ -146,7 +146,7 @@ export default function VargemGrande() {
               />
               <img
                 src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Unidade Vargem Grande"
+                alt="Unidade Vargem Grande Paulista"
                 className="relative rounded-3xl shadow-elevation-3 w-full object-cover h-[460px] md:h-[520px]"
               />
             </motion.div>
@@ -360,7 +360,7 @@ export default function VargemGrande() {
       </section>
 
       <TriagemForm
-        title="Triagem Unidade Vargem Grande"
+        title="Triagem Unidade Vargem Grande Paulista"
         subtitle="Inicie agora o processo. Atendimento sigiloso e individualizado."
         clinicName={clinic.shortName}
         whatsappUrl={clinic.whatsappUrl}
@@ -382,7 +382,7 @@ export default function VargemGrande() {
 
       <FAQ
         title="Perguntas frequentes"
-        subtitle="As principais dúvidas sobre o tratamento na unidade Vargem Grande."
+        subtitle="As principais dúvidas sobre o tratamento na unidade Vargem Grande Paulista."
         items={clinic.faq}
         primaryColor={theme.primary}
         surface={theme.surface}
@@ -412,7 +412,7 @@ export default function VargemGrande() {
             A liberdade de recomeçar está ao alcance de uma ligação.
           </h2>
           <p className="text-white/90 text-base md:text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-            Fale com a unidade Vargem Grande e descubra como podemos ajudar você ou seu ente querido.
+            Fale com a unidade Vargem Grande Paulista e descubra como podemos ajudar você ou seu ente querido.
           </p>
           <a
             href={clinic.whatsappUrl}

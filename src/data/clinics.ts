@@ -54,7 +54,8 @@ function makeWhatsAppUrl(message: string): string {
   return `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
 }
 
-// All 5 videos from the Bruno Ferrari channel (https://www.youtube.com/@brunoferrari4845)
+// Vídeos do canal Bruno Ferrari (https://www.youtube.com/@brunoferrari4845)
+// "Faces e Vozes" removido a pedido do cliente.
 const channelVideos: ClinicVideo[] = [
   {
     id: 'enpNrdKtpmA',
@@ -75,11 +76,6 @@ const channelVideos: ClinicVideo[] = [
     id: 'kGLqtVo-brA',
     title: 'Qual o melhor tratamento? Bruno Ferrari',
     url: 'https://www.youtube.com/watch?v=kGLqtVo-brA',
-  },
-  {
-    id: 'TONudnLKkBo',
-    title: 'Faces e Vozes - Documentário',
-    url: 'https://www.youtube.com/watch?v=TONudnLKkBo',
   },
 ];
 
@@ -128,16 +124,16 @@ export const clinics = {
     slug: 'evolucao',
     path: '/',
     brand: 'EVOLUÇÃO',
-    shortName: 'Clínica Evolução',
-    region: 'São Bernardo do Campo · SP',
+    shortName: 'Rede Evolução',
+    region: 'Espaço Terapêutico',
     tagline: 'Tratamento humanizado e estrutura completa',
     heroTitle: 'Aqui, você não está sozinho. Cuidamos de você e da sua história.',
     heroSubtitle:
       'Cada pessoa é única. Nossos tratamentos são personalizados, feitos com empatia, profissionalismo e total dedicação para ajudar você a reconquistar sua saúde, sua autonomia e sua qualidade de vida.',
     heroImage: 'https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
     whatsapp: PHONE,
-    whatsappMessage: 'Olá! Vim pelo site da Clínica Evolução e gostaria de mais informações sobre o tratamento.',
-    whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site da Clínica Evolução e gostaria de mais informações sobre o tratamento.'),
+    whatsappMessage: 'Olá! Vim pelo site da Rede Evolução e gostaria de mais informações sobre o tratamento.',
+    whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site da Rede Evolução e gostaria de mais informações sobre o tratamento.'),
     phoneDisplay: PHONE_DISPLAY,
     email: EMAIL,
     instagram: 'https://www.instagram.com/redevolucao',
@@ -150,7 +146,7 @@ export const clinics = {
       surface: '#F4F4F0',
       initial: 'E',
     },
-    videos: pick([0, 4, 1, 3]),
+    videos: pick([0, 2, 1, 3]),
     gallery: sharedGallery,
     faq: baseFAQ,
   } as Clinic,
@@ -159,16 +155,16 @@ export const clinics = {
     slug: 'perseveranca',
     path: '/perseveranca',
     brand: 'PERSEVERANÇA',
-    shortName: 'Clínica Perseverança',
-    region: 'Itapetininga · SP',
+    shortName: 'Centro Terapêutico Perseverança',
+    region: 'Centro Terapêutico · Itapetininga, SP',
     tagline: 'Nova unidade · Ambiente acolhedor',
-    heroTitle: 'Clínica Perseverança: um novo começo.',
+    heroTitle: 'Centro Terapêutico Perseverança: um novo começo.',
     heroSubtitle:
       'Nossa nova unidade oferece um ambiente de paz, estrutura moderna e o mesmo padrão de excelência em tratamento e acolhimento que você já conhece.',
     heroImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
     whatsapp: PHONE,
-    whatsappMessage: 'Olá! Vim pelo site da Clínica Perseverança e gostaria de mais informações.',
-    whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site da Clínica Perseverança e gostaria de mais informações.'),
+    whatsappMessage: 'Olá! Vim pelo site do Centro Terapêutico Perseverança e gostaria de mais informações.',
+    whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site do Centro Terapêutico Perseverança e gostaria de mais informações.'),
     phoneDisplay: PHONE_DISPLAY,
     email: EMAIL,
     instagram: 'https://www.instagram.com/redevolucao',
@@ -181,13 +177,13 @@ export const clinics = {
       surface: '#F4F4F0',
       initial: 'P',
     },
-    videos: pick([3, 2, 4, 0]),
+    videos: pick([3, 1, 0, 2]),
     gallery: sharedGallery,
     faq: [
       {
         question: 'Quanto custa e o que está incluso no valor?',
         answer:
-          'O valor da Clínica Perseverança em Itapetininga varia conforme a estrutura, a equipe e o tempo de internação. Geralmente inclui hospedagem, alimentação, acompanhamento médico e psicológico, atividades terapêuticas e suporte à família. Medicamentos, exames e cantina podem ser cobrados à parte.',
+          'O valor no Centro Terapêutico Perseverança em Itapetininga varia conforme a estrutura, a equipe e o tempo de internação. Geralmente inclui hospedagem, alimentação, acompanhamento médico e psicológico, atividades terapêuticas e suporte à família. Medicamentos, exames e cantina podem ser cobrados à parte.',
       },
       {
         question: 'Quanto tempo é indicado o tratamento?',
@@ -217,7 +213,7 @@ export const clinics = {
     path: '/litoral-sul',
     brand: 'LITORAL SUL',
     shortName: 'Unidade Litoral Sul',
-    region: 'Espaço terapêutico beira-mar',
+    region: 'Unidade · Beira-mar',
     tagline: 'Recuperação em harmonia com a natureza',
     heroTitle: 'Litoral Sul: recuperação à beira-mar, em harmonia com a natureza.',
     heroSubtitle:
@@ -238,7 +234,7 @@ export const clinics = {
       surface: '#F8F4EC',
       initial: 'L',
     },
-    videos: pick([4, 0, 2, 1]),
+    videos: pick([2, 0, 3, 1]),
     gallery: [
       { src: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Vista para o mar' },
       { src: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Praia tranquila' },
@@ -279,17 +275,17 @@ export const clinics = {
   'vargem-grande': {
     slug: 'vargem-grande',
     path: '/vargem-grande',
-    brand: 'VARGEM GRANDE',
-    shortName: 'Unidade Vargem Grande',
-    region: 'Tratamento estruturado',
+    brand: 'VARGEM GRANDE PAULISTA',
+    shortName: 'Unidade Vargem Grande Paulista',
+    region: 'Unidade',
     tagline: 'Tratamento completo em ambiente confortável',
-    heroTitle: 'Vargem Grande: o melhor tratamento para dependência química e alcoolismo.',
+    heroTitle: 'Vargem Grande Paulista: o melhor tratamento para dependência química e alcoolismo.',
     heroSubtitle:
       'Nossos tratamentos já libertaram centenas de pessoas que buscaram nossa ajuda. Equipe multidisciplinar, ambiente seguro e atendimento individualizado.',
     heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
     whatsapp: PHONE,
-    whatsappMessage: 'Olá! Vim pelo site da unidade Vargem Grande e gostaria de mais informações.',
-    whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site da unidade Vargem Grande e gostaria de mais informações.'),
+    whatsappMessage: 'Olá! Vim pelo site da unidade Vargem Grande Paulista Paulista e gostaria de mais informações.',
+    whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site da unidade Vargem Grande Paulista Paulista e gostaria de mais informações.'),
     phoneDisplay: PHONE_DISPLAY,
     email: EMAIL,
     instagram: 'https://www.instagram.com/redevolucao',
@@ -302,7 +298,7 @@ export const clinics = {
       surface: '#F4F6FB',
       initial: 'V',
     },
-    videos: pick([2, 1, 3, 4]),
+    videos: pick([1, 3, 2, 0]),
     gallery: [
       { src: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Sala de convivência' },
       { src: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Piscina' },
@@ -315,12 +311,12 @@ export const clinics = {
       {
         question: 'Quanto custa e o que está incluso no valor?',
         answer:
-          'Na unidade Vargem Grande as diárias variam entre R$ 3.500 e R$ 5.000, conforme a acomodação e o plano terapêutico. O valor inclui hospedagem, alimentação, acompanhamento médico e psicológico, atividades terapêuticas e suporte à família. Medicamentos, exames e cantina podem ser cobrados à parte.',
+          'Na unidade Vargem Grande Paulista as diárias variam entre R$ 3.500 e R$ 5.000, conforme a acomodação e o plano terapêutico. O valor inclui hospedagem, alimentação, acompanhamento médico e psicológico, atividades terapêuticas e suporte à família. Medicamentos, exames e cantina podem ser cobrados à parte.',
       },
       {
         question: 'Quanto tempo é indicado o tratamento?',
         answer:
-          'Cada caso é único. Na unidade Vargem Grande o tratamento pode variar de 90 a 180 dias, e a recuperação é um processo contínuo que segue mesmo após a alta, com acompanhamento ambulatorial e apoio familiar.',
+          'Cada caso é único. Na unidade Vargem Grande Paulista o tratamento pode variar de 90 a 180 dias, e a recuperação é um processo contínuo que segue mesmo após a alta, com acompanhamento ambulatorial e apoio familiar.',
       },
       {
         question: 'Posso obrigar meu filho a se internar? Como funciona legalmente?',

@@ -1,9 +1,15 @@
 import { motion } from 'framer-motion';
 import type { LucideIcon } from 'lucide-react';
+import CountUp from '@/components/CountUp';
 
 export interface StatItem {
   icon: LucideIcon;
+  /** valor de exibição padrão (ex: '24h', 'Nova') usado quando countUpTo não é definido */
   value: string;
+  /** se definido, anima de 0 até este valor quando entra na viewport */
+  countUpTo?: number;
+  countUpPrefix?: string;
+  countUpSuffix?: string;
   label: string;
   description?: string;
 }
@@ -84,7 +90,15 @@ export default function Stats({
                   className="text-3xl md:text-4xl font-extrabold mb-1 tracking-tight"
                   style={{ color: valueColor }}
                 >
-                  {item.value}
+                  {item.countUpTo !== undefined ? (
+                    <CountUp
+                      to={item.countUpTo}
+                      prefix={item.countUpPrefix}
+                      suffix={item.countUpSuffix}
+                    />
+                  ) : (
+                    item.value
+                  )}
                 </div>
                 <div
                   className="font-semibold text-sm md:text-base"

@@ -7,6 +7,7 @@ import Gallery from '@/components/sections/Gallery';
 import CTABanner from '@/components/sections/CTABanner';
 import Stats from '@/components/sections/Stats';
 import LogoCarousel from '@/components/sections/LogoCarousel';
+import CountUp from '@/components/CountUp';
 import {
   PhoneCall,
   Building2,
@@ -29,10 +30,10 @@ export default function Home() {
   const { theme } = clinic;
 
   const stats = [
-    { icon: Calendar, value: '+10', label: 'Anos de experiência', description: 'Tradição em cuidado humanizado' },
-    { icon: Users, value: '+2.500', label: 'Vidas transformadas', description: 'Pacientes atendidos' },
+    { icon: Calendar, value: '+16', countUpTo: 16, countUpPrefix: '+', label: 'Anos de experiência', description: 'Tradição em cuidado humanizado' },
+    { icon: Users, value: '+2.500', countUpTo: 2500, countUpPrefix: '+', label: 'Vidas transformadas', description: 'Pacientes atendidos' },
     { icon: Stethoscope, value: '24h', label: 'Atendimento contínuo', description: 'Equipe disponível sempre' },
-    { icon: HeartHandshake, value: '+30', label: 'Profissionais', description: 'Equipe multidisciplinar' },
+    { icon: HeartHandshake, value: '+30', countUpTo: 30, countUpPrefix: '+', label: 'Profissionais', description: 'Equipe multidisciplinar' },
   ];
 
   const convenios = [
@@ -58,7 +59,7 @@ export default function Home() {
         primaryDark={theme.primaryDark}
         accentColor={theme.accent}
         badge="Atendimento sigiloso 24h"
-        trustSignals={['Equipe médica especializada', 'Sigilo absoluto', '+10 anos de experiência']}
+        trustSignals={['Equipe médica especializada', 'Sigilo absoluto', '+16 anos de experiência']}
       />
 
       {/* Quick highlights - 3 cards */}
@@ -137,7 +138,7 @@ export default function Home() {
               />
               <img
                 src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Equipe profissional da Clínica Evolução"
+                alt="Equipe profissional da Rede Evolução"
                 className="relative rounded-3xl shadow-elevation-3 w-full object-cover h-[460px] md:h-[520px]"
               />
               <div
@@ -151,7 +152,7 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="text-2xl font-extrabold tracking-tight" style={{ color: theme.primary }}>
-                    +10 anos
+                    <CountUp to={16} prefix="+" /> anos
                   </div>
                   <div className="text-xs text-gray-500 font-medium">de experiência</div>
                 </div>
@@ -169,16 +170,15 @@ export default function Home() {
                 className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4"
                 style={{ backgroundColor: `${theme.primary}15`, color: theme.primary }}
               >
-                Sobre a Clínica Evolução
+                Sobre a Rede Evolução
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-[1.15] text-gray-900 tracking-tight">
                 Uma rede comprometida com a sua{' '}
                 <span style={{ color: theme.primary }}>recuperação</span>
               </h2>
               <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8">
-                Sediada em <strong>São Bernardo do Campo</strong>, a Clínica Evolução é
-                referência em tratamento humanizado para dependência química, alcoolismo e
-                transtornos psiquiátricos. Nossa rede une estrutura moderna, equipe
+                A Rede Evolução é referência em tratamento humanizado para dependência química,
+                alcoolismo e transtornos psiquiátricos. Unimos estrutura moderna, equipe
                 multidisciplinar experiente e protocolos clínicos atualizados para oferecer o
                 melhor caminho de recuperação.
               </p>
@@ -187,7 +187,7 @@ export default function Home() {
                   { Icon: Heart, title: 'Acolhimento', desc: 'Tratamento humanizado', tone: theme.primary },
                   { Icon: ShieldCheck, title: 'Sigilo total', desc: 'Atendimento confidencial', tone: theme.cta },
                   { Icon: Stethoscope, title: 'Equipe médica', desc: 'Multidisciplinar', tone: theme.primary },
-                  { Icon: Award, title: 'Excelência', desc: 'Mais de 10 anos', tone: theme.cta },
+                  { Icon: Award, title: 'Excelência', desc: 'Mais de 16 anos', tone: theme.cta },
                 ].map((f) => (
                   <div key={f.title} className="flex items-start gap-3">
                     <div
@@ -237,7 +237,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
             {[
               {
                 Icon: User,
@@ -248,18 +248,9 @@ export default function Home() {
                 iconBg: 'rgba(255,255,255,0.2)',
               },
               {
-                Icon: Users,
-                title: 'Casa Terapêutica Feminina',
-                desc: 'Tratamento acolhedor e especializado para mulheres em recuperação, com foco emocional, físico e social.',
-                bg: '#fff',
-                textColor: theme.primary,
-                iconBg: `${theme.primary}15`,
-                bordered: true,
-              },
-              {
                 Icon: HomeIcon,
                 title: 'Moradia Terapêutica Assistida',
-                desc: 'Ambiente seguro e supervisionado para a reintegração social com apoio contínuo.',
+                desc: 'Ambiente seguro e supervisionado para a reintegração social com apoio contínuo na sobriedade e autonomia.',
                 bg: theme.primaryDark,
                 textColor: '#fff',
                 iconBg: 'rgba(255,255,255,0.2)',
@@ -271,19 +262,17 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`rounded-3xl p-8 md:p-10 shadow-elevation-2 hover:shadow-elevation-3 transition-shadow duration-300 ${
-                  service.bordered ? 'border border-gray-100' : ''
-                }`}
+                className="rounded-3xl p-8 md:p-12 shadow-elevation-2 hover:shadow-elevation-3 transition-shadow duration-300"
                 style={{ backgroundColor: service.bg, color: service.textColor }}
               >
                 <div
-                  className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5"
+                  className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
                   style={{ backgroundColor: service.iconBg, color: service.textColor }}
                 >
                   <service.Icon size={32} strokeWidth={1.8} />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold mb-4 leading-tight">{service.title}</h3>
-                <p className={service.bg === '#fff' ? 'text-gray-600 leading-relaxed' : 'leading-relaxed opacity-90'}>
+                <p className="leading-relaxed opacity-90 text-base md:text-lg">
                   {service.desc}
                 </p>
               </motion.div>
@@ -399,7 +388,7 @@ export default function Home() {
 
       {/* Triagem */}
       <TriagemForm
-        title="Triagem Clínica Evolução"
+        title="Triagem Rede Evolução"
         subtitle="Preencha o formulário abaixo para que nossa equipe entenda melhor o seu caso ou o de seu familiar. Entraremos em contato o mais breve possível."
         clinicName={clinic.shortName}
         whatsappUrl={clinic.whatsappUrl}
@@ -458,7 +447,7 @@ export default function Home() {
             A recuperação é possível. Nós acreditamos em você.
           </h2>
           <p className="text-white/90 text-base md:text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-            Fale com a Clínica Evolução e descubra como podemos ajudar você ou seu ente querido a
+            Fale com a Rede Evolução e descubra como podemos ajudar você ou seu ente querido a
             iniciar uma nova jornada de vida.
           </p>
           <a
