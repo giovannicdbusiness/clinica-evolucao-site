@@ -81,14 +81,90 @@ const channelVideos: ClinicVideo[] = [
 
 const pick = (order: number[]): ClinicVideo[] => order.map((i) => channelVideos[i]);
 
-const sharedGallery: ClinicGalleryImage[] = [
-  { src: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Área Externa' },
-  { src: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Acomodações' },
-  { src: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Piscina' },
-  { src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Consultório' },
-  { src: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Sala de Convivência' },
-  { src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Refeitório' },
-];
+// Helper para construir galeria de uma unidade a partir do nome da pasta + lista de arquivos.
+// Caminho é absoluto a partir de /public/. Espaços na URL são automaticamente encoded pelo browser.
+function buildGallery(folder: string, files: string[], unitName: string): ClinicGalleryImage[] {
+  return files.map((f, i) => ({
+    src: `/${folder}/${f}`,
+    alt: `Estrutura ${unitName} - foto ${i + 1}`,
+  }));
+}
+
+const galleryEvolucao = buildGallery(
+  'todos rede evolucao principal',
+  [
+    '07b6655d-4812-4bad-ac01-123977d26ca6.JPG',
+    '0bd1ec12-cfcc-424d-bc8b-50aadeb5aeb8.JPG',
+    '0c05d0f7-fd45-48ef-9fe1-1e62886c5a64.JPG',
+    '1f48ffa0-8aea-484d-8806-5f7142ec47bc.JPG',
+    '29d99765-e6c0-45f1-8600-63ac763ba507.JPG',
+    '33ba046e-8300-418e-acc3-edb22d53856f.JPG',
+    '46981ba9-c9c0-42af-9387-02121d77a17b.JPG',
+    '5153b5f8-8efc-48ff-b74d-4cc6f2f7ec5e.JPG',
+    '79889e60-5f7e-4649-b8f3-3f8d88e09c44.JPG',
+    '80ae75a5-163e-4f5a-8349-d68b9d298a27.JPG',
+    '8d406e5a-4c80-4d42-9f57-e65c96fe16ca.JPG',
+    '98ec993a-1a2b-4064-abc2-76658abd0302.JPG',
+    'd1b0a3b0-9560-451c-8d5a-c7fb7a70dcb9.JPG',
+    'fbc30c0d-90c0-421c-a548-adbe3b08c912.JPG',
+  ],
+  'Rede Evolução',
+);
+
+const galleryPerseveranca = buildGallery(
+  'fotos itape',
+  [
+    '2407c852-13c8-493d-a17f-ab5d6f01ab7f.JPG',
+    '7f893f06-13f0-42b8-a41d-27a9fa726cec.JPG',
+    '87bf32b3-ea46-42b3-b124-58e7eb8ebfdc.JPG',
+    '8d812797-b651-40a3-a68d-10fa83984536.JPG',
+    '96aaa172-46b2-4b15-b8ef-2685ee2c8b32.JPG',
+    'c905bcb1-2a3f-4ea3-9c56-96bead049c41.JPG',
+  ],
+  'Centro Terapêutico Perseverança',
+);
+
+const galleryLitoralSul = buildGallery(
+  'fotos litoral sul',
+  [
+    '009c4e72-9eca-4ebb-bd6c-275b8fb64bcb.JPG',
+    '21065ed2-5fa1-437d-9a68-851a48cdf7a8.JPG',
+    '35a77914-11b4-45f1-96d7-c6ffbe0a0f4b.JPG',
+    '42888e7e-6ef8-4425-9637-008c47269d21.JPG',
+    '549f2ccc-8a5a-418a-9357-5879673d55d2.JPG',
+    '562ad077-f847-4bf2-97a8-1854788fc0f1.JPG',
+    '804f7d6e-d135-4f98-b7f3-a522f6f230f3.JPG',
+    'a2f6cc77-82c7-4d60-b7ea-890a32d69487.JPG',
+    'be0e2f78-2724-48c7-aa01-443eb13e8ea4.JPG',
+    'd2a34325-fe5b-4ca3-9841-194bc620b0d1.JPG',
+    'd7a809b2-cc95-4b3e-9dcd-88a8eb38d8d8.JPG',
+    'e96fa315-12f0-4af8-95c3-86b3a531d006.JPG',
+    'f98cb421-13d6-47e9-9af0-057956f41b67.JPG',
+  ],
+  'Unidade Litoral Sul',
+);
+
+const galleryVargemGrande = buildGallery(
+  'fotos unidade vargem grande',
+  [
+    '0501efcc-11f1-4834-96a0-bd97cd57e1b6.JPG',
+    '4c515e66-0faa-4f8e-9558-430d835796fc.JPG',
+    '5d6ea6a2-c04d-4439-9eec-59876da87a29.JPG',
+    '649b5ef0-738f-409e-9ab0-173574983117.JPG',
+    '68c28c2f-d0b1-46e1-805b-9c8dce2d9c9f.JPG',
+    '6e8a9363-0fea-4552-bcf8-e9cf52c5552c.JPG',
+    '7761bdec-31d5-49b1-a77d-246a0fe510fc.JPG',
+    '85508165-cf8f-4098-b4c8-0f18498144ed.JPG',
+    '8836a955-eb55-4cc6-a236-3472c57c204b.JPG',
+    '932e0584-7de7-482a-bdf3-ea3ac42d99c3.JPG',
+    '9b367e97-4494-4adc-8b59-cb9ab81d87bc.JPG',
+    'a1fd1ca2-40e0-40ee-884b-2fea159b126a.JPG',
+    'ba310796-466b-427c-bae2-887c4344f8ce.JPG',
+    'f2f33349-5b0b-4699-b12b-c9db70480328.JPG',
+    'f899dd2b-05d8-4da6-aa7b-51b22f3b1431.JPG',
+  ],
+  'Unidade Vargem Grande Paulista',
+);
 
 // FAQ oficial do site da Rede Evolução (clinicaredeevolucao.com.br)
 const baseFAQ: ClinicFAQItem[] = [
@@ -147,7 +223,7 @@ export const clinics = {
       initial: 'E',
     },
     videos: pick([0, 2, 1, 3]),
-    gallery: sharedGallery,
+    gallery: galleryEvolucao,
     faq: baseFAQ,
   } as Clinic,
 
@@ -178,7 +254,7 @@ export const clinics = {
       initial: 'P',
     },
     videos: pick([3, 1, 0, 2]),
-    gallery: sharedGallery,
+    gallery: galleryPerseveranca,
     faq: [
       {
         question: 'Quanto custa e o que está incluso no valor?',
@@ -235,14 +311,7 @@ export const clinics = {
       initial: 'L',
     },
     videos: pick([2, 0, 3, 1]),
-    gallery: [
-      { src: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Vista para o mar' },
-      { src: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Praia tranquila' },
-      { src: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Acomodações beira-mar' },
-      { src: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Área de meditação' },
-      { src: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Piscina externa' },
-      { src: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Jardim terapêutico' },
-    ],
+    gallery: galleryLitoralSul,
     faq: [
       {
         question: 'Quanto custa e o que está incluso no valor?',
@@ -299,14 +368,7 @@ export const clinics = {
       initial: 'V',
     },
     videos: pick([1, 3, 2, 0]),
-    gallery: [
-      { src: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Sala de convivência' },
-      { src: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Piscina' },
-      { src: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Academia' },
-      { src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Refeitório' },
-      { src: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Quartos' },
-      { src: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Área externa' },
-    ],
+    gallery: galleryVargemGrande,
     faq: [
       {
         question: 'Quanto custa e o que está incluso no valor?',
