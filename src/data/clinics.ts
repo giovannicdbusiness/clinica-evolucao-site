@@ -123,7 +123,7 @@ export const clinics = {
   evolucao: {
     slug: 'evolucao',
     path: '/',
-    brand: 'EVOLUÇÃO',
+    brand: 'REDE EVOLUÇÃO',
     shortName: 'Rede Evolução',
     region: 'Espaço Terapêutico',
     tagline: 'Tratamento humanizado e estrutura completa',
