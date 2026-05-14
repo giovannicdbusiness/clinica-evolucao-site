@@ -179,8 +179,8 @@ export default function EspacoTerapeutico() {
                 style={{ backgroundColor: theme.primary }}
               />
               <img
-                src={clinic.gallery[0]?.src ?? clinic.heroImage}
-                alt="Moradia Terapêutica Assistida — Espaço Terapêutico Evolução"
+                src="/todos rede evolucao principal/0bd1ec12-cfcc-424d-bc8b-50aadeb5aeb8.JPG"
+                alt="Moradia Terapêutica Assistida — área externa com piscina"
                 className="relative rounded-3xl shadow-elevation-3 w-full object-cover h-[480px] md:h-[560px]"
               />
               <div
