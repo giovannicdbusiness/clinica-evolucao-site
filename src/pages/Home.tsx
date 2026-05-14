@@ -137,8 +137,8 @@ export default function Home() {
                 style={{ backgroundColor: theme.primary }}
               />
               <img
-                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Equipe profissional da Rede Evolução"
+                src="/todos rede evolucao principal/29d99765-e6c0-45f1-8600-63ac763ba507.JPG"
+                alt="Sala de convivência da Rede Evolução"
                 className="relative rounded-3xl shadow-elevation-3 w-full object-cover h-[460px] md:h-[520px]"
               />
               <div

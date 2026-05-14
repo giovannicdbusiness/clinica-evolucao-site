@@ -118,13 +118,13 @@ export default function Perseveranca() {
             >
               <div className="grid grid-cols-2 gap-4">
                 <img
-                  src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                  alt="Área externa Perseverança"
+                  src="/fotos itape/96aaa172-46b2-4b15-b8ef-2685ee2c8b32.JPG"
+                  alt="Área externa Perseverança - piscina e jardim"
                   className="rounded-3xl shadow-elevation-2 w-full h-72 object-cover"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                  alt="Acomodações Perseverança"
+                  src="/fotos itape/7f893f06-13f0-42b8-a41d-27a9fa726cec.JPG"
+                  alt="Espaço arborizado Perseverança"
                   className="rounded-3xl shadow-elevation-2 w-full h-72 object-cover mt-10"
                 />
               </div>

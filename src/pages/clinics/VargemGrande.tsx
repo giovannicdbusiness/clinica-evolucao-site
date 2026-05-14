@@ -145,8 +145,8 @@ export default function VargemGrande() {
                 style={{ backgroundColor: theme.primary }}
               />
               <img
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Unidade Vargem Grande Paulista"
+                src="/fotos unidade vargem grande/68c28c2f-d0b1-46e1-805b-9c8dce2d9c9f.JPG"
+                alt="Unidade Vargem Grande Paulista - fachada"
                 className="relative rounded-3xl shadow-elevation-3 w-full object-cover h-[460px] md:h-[520px]"
               />
             </motion.div>

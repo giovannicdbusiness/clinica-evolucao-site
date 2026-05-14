@@ -93,8 +93,8 @@ export default function LitoralSul() {
                 style={{ backgroundColor: theme.primary }}
               />
               <img
-                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Unidade Litoral Sul - Espaço beira-mar"
+                src="/fotos litoral sul/d2a34325-fe5b-4ca3-9841-194bc620b0d1.JPG"
+                alt="Unidade Litoral Sul - sala de convivência"
                 className="relative rounded-3xl shadow-elevation-3 w-full object-cover h-[460px] md:h-[520px]"
               />
               <div className="absolute -bottom-6 -right-2 md:-right-6 bg-white/95 backdrop-blur-sm px-5 py-3 rounded-2xl shadow-elevation-3 font-bold flex items-center gap-2 border border-gray-100">
