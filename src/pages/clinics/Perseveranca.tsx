@@ -28,7 +28,7 @@ export default function Perseveranca() {
     { icon: Calendar, value: 'Nova', label: 'Unidade', description: 'Inaugurada recentemente' },
     { icon: Trees, value: '100%', countUpTo: 100, countUpSuffix: '%', label: 'Área arborizada', description: 'Ambiente em meio à natureza' },
     { icon: Stethoscope, value: '24h', label: 'Atendimento', description: 'Equipe sempre disponível' },
-    { icon: Users, value: '+15', countUpTo: 15, countUpPrefix: '+', label: 'Profissionais', description: 'Equipe multidisciplinar' },
+    { icon: Users, value: '✓', label: 'Equipe multidisciplinar', description: 'Profissionais qualificados' },
   ];
 
   return (

@@ -169,11 +169,6 @@ const galleryVargemGrande = buildGallery(
 // FAQ oficial do site da Rede Evolução (clinicaredeevolucao.com.br)
 const baseFAQ: ClinicFAQItem[] = [
   {
-    question: 'Quanto custa e o que está incluso no valor?',
-    answer:
-      'O valor varia conforme a estrutura, a equipe e o tempo de internação. Geralmente inclui hospedagem, alimentação, acompanhamento médico e psicológico, atividades terapêuticas e suporte à família. Medicamentos, exames e cantina podem ser cobrados à parte.',
-  },
-  {
     question: 'Quanto tempo é indicado o tratamento?',
     answer:
       'Cada caso é único. O tratamento pode variar de 90 a 180 dias, e a recuperação é um processo contínuo que segue mesmo após a alta, com acompanhamento ambulatorial e apoio familiar.',
@@ -227,6 +222,37 @@ export const clinics = {
     faq: baseFAQ,
   } as Clinic,
 
+  'espaco-terapeutico': {
+    slug: 'espaco-terapeutico',
+    path: '/espaco-terapeutico',
+    brand: 'ESPAÇO TERAPÊUTICO',
+    shortName: 'Espaço Terapêutico Evolução',
+    region: 'Moradia Assistida · Estrutura completa',
+    tagline: 'Moradia Assistida e estrutura de alto padrão',
+    heroTitle: 'Espaço Terapêutico Evolução: onde a moradia se transforma em recomeço.',
+    heroSubtitle:
+      'Um ambiente integralmente projetado para a Moradia Terapêutica Assistida, com infraestrutura completa e cuidado contínuo para o seu processo de recuperação e autonomia.',
+    heroImage: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    whatsapp: PHONE,
+    whatsappMessage: 'Olá! Vim pelo site do Espaço Terapêutico Evolução e gostaria de mais informações sobre a Moradia Assistida.',
+    whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site do Espaço Terapêutico Evolução e gostaria de mais informações sobre a Moradia Assistida.'),
+    phoneDisplay: PHONE_DISPLAY,
+    email: EMAIL,
+    instagram: 'https://www.instagram.com/redevolucao',
+    theme: {
+      primary: '#3F8A85',
+      primaryDark: '#2D6D69',
+      accent: '#C8E8DD',
+      cta: '#F59E0B',
+      ctaDark: '#D97706',
+      surface: '#F2F6F4',
+      initial: 'T',
+    },
+    videos: pick([0, 2, 1, 3]),
+    gallery: galleryEvolucao,
+    faq: baseFAQ,
+  } as Clinic,
+
   perseveranca: {
     slug: 'perseveranca',
     path: '/perseveranca',
@@ -256,11 +282,6 @@ export const clinics = {
     videos: pick([3, 1, 0, 2]),
     gallery: galleryPerseveranca,
     faq: [
-      {
-        question: 'Quanto custa e o que está incluso no valor?',
-        answer:
-          'O valor no Centro Terapêutico Perseverança em Itapetininga varia conforme a estrutura, a equipe e o tempo de internação. Geralmente inclui hospedagem, alimentação, acompanhamento médico e psicológico, atividades terapêuticas e suporte à família. Medicamentos, exames e cantina podem ser cobrados à parte.',
-      },
       {
         question: 'Quanto tempo é indicado o tratamento?',
         answer:
@@ -314,11 +335,6 @@ export const clinics = {
     gallery: galleryLitoralSul,
     faq: [
       {
-        question: 'Quanto custa e o que está incluso no valor?',
-        answer:
-          'O valor na unidade Litoral Sul varia conforme a estrutura, a equipe e o tempo de internação. Geralmente inclui hospedagem beira-mar, alimentação, acompanhamento médico e psicológico, atividades terapêuticas integradas à natureza e suporte à família. Medicamentos, exames e cantina podem ser cobrados à parte.',
-      },
-      {
         question: 'Quanto tempo é indicado o tratamento?',
         answer:
           'Cada caso é único. Na unidade Litoral Sul o tratamento pode variar de 90 a 180 dias, e a recuperação é um processo contínuo que segue mesmo após a alta, com acompanhamento ambulatorial e apoio familiar.',
@@ -371,11 +387,6 @@ export const clinics = {
     gallery: galleryVargemGrande,
     faq: [
       {
-        question: 'Quanto custa e o que está incluso no valor?',
-        answer:
-          'Na unidade Vargem Grande Paulista as diárias variam entre R$ 3.500 e R$ 5.000, conforme a acomodação e o plano terapêutico. O valor inclui hospedagem, alimentação, acompanhamento médico e psicológico, atividades terapêuticas e suporte à família. Medicamentos, exames e cantina podem ser cobrados à parte.',
-      },
-      {
         question: 'Quanto tempo é indicado o tratamento?',
         answer:
           'Cada caso é único. Na unidade Vargem Grande Paulista o tratamento pode variar de 90 a 180 dias, e a recuperação é um processo contínuo que segue mesmo após a alta, com acompanhamento ambulatorial e apoio familiar.',
@@ -401,6 +412,15 @@ export const clinics = {
 
 export const clinicList: Clinic[] = [
   clinics.evolucao,
+  clinics['espaco-terapeutico'],
+  clinics.perseveranca,
+  clinics['litoral-sul'],
+  clinics['vargem-grande'],
+];
+
+// Lista usada como gatilho na home (HUB) — exclui a própria Rede Evolução.
+export const unitsForHub: Clinic[] = [
+  clinics['espaco-terapeutico'],
   clinics.perseveranca,
   clinics['litoral-sul'],
   clinics['vargem-grande'],

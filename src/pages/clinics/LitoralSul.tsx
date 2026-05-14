@@ -27,7 +27,7 @@ export default function LitoralSul() {
     { icon: Waves, value: '100%', countUpTo: 100, countUpSuffix: '%', label: 'Beira-mar', description: 'Ambiente natural curativo' },
     { icon: Leaf, value: 'Integ.', label: 'Programa', description: 'Terapia + natureza' },
     { icon: Stethoscope, value: '24h', label: 'Atendimento', description: 'Equipe sempre disponível' },
-    { icon: Users, value: '+20', countUpTo: 20, countUpPrefix: '+', label: 'Profissionais', description: 'Equipe multidisciplinar' },
+    { icon: Users, value: '✓', label: 'Equipe multidisciplinar', description: 'Profissionais qualificados' },
   ];
 
   return (

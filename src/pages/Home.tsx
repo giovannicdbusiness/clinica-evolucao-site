@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Hero from '@/components/sections/Hero';
 import YouTubeSlider from '@/components/sections/YouTubeSlider';
 import TriagemForm from '@/components/forms/TriagemForm';
 import FAQ from '@/components/sections/FAQ';
-import Gallery from '@/components/sections/Gallery';
 import CTABanner from '@/components/sections/CTABanner';
 import Stats from '@/components/sections/Stats';
 import LogoCarousel from '@/components/sections/LogoCarousel';
@@ -23,7 +23,7 @@ import {
   HeartHandshake,
   ArrowRight,
 } from 'lucide-react';
-import { clinics } from '@/data/clinics';
+import { clinics, unitsForHub } from '@/data/clinics';
 
 export default function Home() {
   const clinic = clinics.evolucao;
@@ -292,96 +292,92 @@ export default function Home() {
         buttonText2={theme.cta}
       />
 
-      {/* Galeria */}
-      <Gallery
-        title="Conheça nossas estruturas"
-        subtitle="Espaços pensados para promover acolhimento, segurança e bem-estar durante todo o tratamento."
-        images={clinic.gallery}
-        primaryColor={theme.primary}
-        ctaColor={theme.cta}
-        ctaDark={theme.ctaDark}
-        ctaUrl={clinic.whatsappUrl}
-        surface={theme.surface}
-      />
-
-      {/* Moradia Assistida highlight */}
-      <section className="py-20 md:py-24 bg-white overflow-hidden">
+      {/* Nossas Unidades — seção-gatilho do HUB */}
+      <section id="estruturas" className="py-20 md:py-28" style={{ backgroundColor: theme.surface }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.6 }}
-              className="lg:w-1/2"
+          <div className="text-center mb-14 max-w-2xl mx-auto">
+            <span
+              className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4"
+              style={{ backgroundColor: `${theme.primary}15`, color: theme.primary }}
             >
-              <span
-                className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4"
-                style={{ backgroundColor: `${theme.primary}15`, color: theme.primary }}
-              >
-                Diferencial
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight" style={{ color: theme.primary }}>
-                Moradia Assistida
-              </h2>
-              <div className="space-y-5 text-gray-600 text-base md:text-lg leading-relaxed">
-                <p>Ambiente seguro e acolhedor, com apoio diário de profissionais especializados.</p>
-                <p>
-                  Oferecemos auxílio em cuidados pessoais, medicação e acompanhamento terapêutico
-                  contínuo. A estrutura é moderna, adaptada e focada na autonomia, bem-estar e
-                  recuperação dos residentes.
-                </p>
-                <p>
-                  Promovemos atividades que estimulam a socialização e o desenvolvimento de
-                  habilidades cotidianas, garantindo respeito, acolhimento e confiança em cada
-                  etapa.
-                </p>
-              </div>
-              <a
-                href={clinic.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 mt-8 text-white px-8 py-4 rounded-full font-bold shadow-elevation-2 hover:shadow-elevation-3 transition-all duration-200 cursor-pointer"
-                style={{ backgroundColor: theme.cta }}
-                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = theme.ctaDark)}
-                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = theme.cta)}
-              >
-                CONHEÇA NOSSAS ESTRUTURAS
-                <ArrowRight
-                  size={18}
-                  className="transition-transform duration-200 group-hover:translate-x-0.5"
-                />
-              </a>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.6 }}
-              className="lg:w-1/2 relative"
-            >
-              <div
-                className="absolute -inset-4 rounded-3xl transform rotate-2 opacity-[0.08]"
-                style={{ backgroundColor: theme.primary }}
-              />
-              <img
-                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Moradia Assistida"
-                className="relative rounded-3xl shadow-elevation-3 w-full object-cover h-[460px] md:h-[520px]"
-              />
-              <div
-                className="absolute bottom-6 right-6 bg-white/95 backdrop-blur-sm px-5 py-3 rounded-2xl shadow-elevation-2 font-bold flex items-center gap-2 border border-gray-100"
-                style={{ color: theme.primary }}
-              >
-                <div
-                  className="w-7 h-7 rounded-md flex items-center justify-center text-white text-xs"
-                  style={{ backgroundColor: theme.primary }}
+              Nossas unidades
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 tracking-tight" style={{ color: theme.primary }}>
+              Conheça os espaços da Rede Evolução
+            </h2>
+            <p className="text-gray-600 text-base md:text-lg">
+              Cada unidade foi pensada para um perfil de cuidado. Escolha o ambiente que mais
+              combina com a sua jornada de recuperação.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-7">
+            {unitsForHub.map((u, i) => {
+              const cover = u.gallery[0]?.src;
+              return (
+                <motion.div
+                  key={u.slug}
+                  initial={{ opacity: 0, y: 28 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-40px' }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  className="group rounded-3xl overflow-hidden bg-white shadow-elevation-2 hover:shadow-elevation-3 transition-all duration-300 border border-gray-100 flex flex-col"
                 >
-                  E
-                </div>
-                EVOLUÇÃO
-              </div>
-            </motion.div>
+                  <div className="relative h-56 md:h-64 overflow-hidden">
+                    {cover ? (
+                      <img
+                        src={cover}
+                        alt={`${u.shortName} - estrutura`}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div
+                        className="w-full h-full"
+                        style={{
+                          background: `linear-gradient(135deg, ${u.theme.primary}, ${u.theme.primaryDark})`,
+                        }}
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                    <div className="absolute top-4 left-4 flex items-center gap-2">
+                      <div
+                        className="w-11 h-11 rounded-tl-lg rounded-br-lg rounded-tr-sm rounded-bl-sm flex items-center justify-center text-white font-extrabold shadow-md"
+                        style={{ backgroundColor: u.theme.primary }}
+                      >
+                        {u.theme.initial}
+                      </div>
+                    </div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <span className="text-[10px] uppercase tracking-widest font-bold text-white/90 bg-white/15 backdrop-blur-sm px-2.5 py-1 rounded-full inline-block">
+                        {u.region}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-7 flex flex-col flex-grow">
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 leading-tight text-gray-900">
+                      {u.shortName}
+                    </h3>
+                    <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 flex-grow">
+                      {u.tagline}
+                    </p>
+                    <Link
+                      to={u.path}
+                      className="inline-flex items-center justify-between gap-2 px-5 py-3.5 rounded-full font-bold text-sm text-white shadow-elevation-1 hover:shadow-elevation-2 transition-all duration-200 cursor-pointer"
+                      style={{ backgroundColor: u.theme.primary }}
+                      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = u.theme.primaryDark)}
+                      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = u.theme.primary)}
+                    >
+                      SAIBA MAIS
+                      <ArrowRight
+                        size={16}
+                        className="transition-transform duration-200 group-hover:translate-x-1"
+                      />
+                    </Link>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

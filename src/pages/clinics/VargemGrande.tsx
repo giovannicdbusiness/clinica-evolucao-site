@@ -29,7 +29,7 @@ export default function VargemGrande() {
     { icon: Calendar, value: '+16', countUpTo: 16, countUpPrefix: '+', label: 'Anos atuando', description: 'Tradição em recuperação' },
     { icon: Users, value: '+1.000', countUpTo: 1000, countUpPrefix: '+', label: 'Pacientes', description: 'Vidas transformadas' },
     { icon: Stethoscope, value: '24h', label: 'Atendimento', description: 'Equipe disponível sempre' },
-    { icon: Award, value: '+25', countUpTo: 25, countUpPrefix: '+', label: 'Profissionais', description: 'Equipe multidisciplinar' },
+    { icon: Award, value: '✓', label: 'Equipe multidisciplinar', description: 'Profissionais qualificados' },
   ];
 
   const equipe = [
@@ -71,7 +71,7 @@ export default function VargemGrande() {
         primaryDark={theme.primaryDark}
         accentColor={theme.accent}
         badge="Unidade Vargem Grande Paulista"
-        trustSignals={['Equipe multidisciplinar', 'Ambiente seguro 24h', 'Diárias a partir de R$ 3.500']}
+        trustSignals={['Equipe multidisciplinar', 'Ambiente seguro 24h', 'Atendimento humanizado']}
       />
 
       {/* Quem somos */}
@@ -162,45 +162,6 @@ export default function VargemGrande() {
         accentColor={theme.accent}
         bgColor={theme.surface}
       />
-
-      {/* Atendimento especializado - faixa */}
-      <section className="py-16 md:py-20 relative overflow-hidden" style={{ backgroundColor: theme.primary }}>
-        <div
-          className="absolute -top-32 -right-32 w-96 h-96 rounded-full opacity-10 blur-3xl pointer-events-none"
-          style={{ backgroundColor: theme.accent }}
-        />
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-        >
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4 bg-white/10 text-white">
-            Investimento
-          </span>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 tracking-tight">
-            Tratamento completo em um ambiente confortável
-          </h2>
-          <p className="text-white/90 text-lg max-w-2xl mx-auto mb-8">
-            As diárias variam entre <strong>R$ 3.500</strong> e <strong>R$ 5.000</strong>,
-            conforme a acomodação e o plano terapêutico escolhido.
-          </p>
-          <a
-            href={clinic.whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold shadow-elevation-2 hover:shadow-elevation-3 transition-shadow duration-200 cursor-pointer"
-            style={{ backgroundColor: theme.accent, color: '#1A1A1A' }}
-          >
-            SOLICITAR ORÇAMENTO
-            <ArrowRight
-              size={18}
-              className="transition-transform duration-200 group-hover:translate-x-0.5"
-            />
-          </a>
-        </motion.div>
-      </section>
 
       {/* Cronograma 3 passos */}
       <section className="py-20 md:py-24 bg-white">
