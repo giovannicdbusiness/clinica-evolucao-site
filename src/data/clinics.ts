@@ -201,7 +201,7 @@ export const clinics = {
     heroTitle: 'Aqui, você não está sozinho. Cuidamos de você e da sua história.',
     heroSubtitle:
       'Cada pessoa é única. Nossos tratamentos são personalizados, feitos com empatia, profissionalismo e total dedicação para ajudar você a reconquistar sua saúde, sua autonomia e sua qualidade de vida.',
-    heroImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
     whatsapp: PHONE,
     whatsappMessage: 'Olá! Vim pelo site da Rede Evolução e gostaria de mais informações sobre o tratamento.',
     whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site da Rede Evolução e gostaria de mais informações sobre o tratamento.'),
@@ -232,7 +232,7 @@ export const clinics = {
     heroTitle: 'Espaço Terapêutico Evolução: onde a moradia se transforma em recomeço.',
     heroSubtitle:
       'Um ambiente integralmente projetado para a Moradia Terapêutica Assistida, com infraestrutura completa e cuidado contínuo para o seu processo de recuperação e autonomia.',
-    heroImage: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
     whatsapp: PHONE,
     whatsappMessage: 'Olá! Vim pelo site do Espaço Terapêutico Evolução e gostaria de mais informações sobre a Moradia Assistida.',
     whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site do Espaço Terapêutico Evolução e gostaria de mais informações sobre a Moradia Assistida.'),
