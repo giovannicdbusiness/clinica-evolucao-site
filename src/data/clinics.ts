@@ -201,7 +201,7 @@ export const clinics = {
     heroTitle: 'Aqui, você não está sozinho. Cuidamos de você e da sua história.',
     heroSubtitle:
       'Cada pessoa é única. Nossos tratamentos são personalizados, feitos com empatia, profissionalismo e total dedicação para ajudar você a reconquistar sua saúde, sua autonomia e sua qualidade de vida.',
-    heroImage: '/todos rede evolucao principal/79889e60-5f7e-4649-b8f3-3f8d88e09c44.JPG',
+    heroImage: 'https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
     whatsapp: PHONE,
     whatsappMessage: 'Olá! Vim pelo site da Rede Evolução e gostaria de mais informações sobre o tratamento.',
     whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site da Rede Evolução e gostaria de mais informações sobre o tratamento.'),
@@ -232,7 +232,7 @@ export const clinics = {
     heroTitle: 'Espaço Terapêutico Evolução: onde a moradia se transforma em recomeço.',
     heroSubtitle:
       'Um ambiente integralmente projetado para a Moradia Terapêutica Assistida, com infraestrutura completa e cuidado contínuo para o seu processo de recuperação e autonomia.',
-    heroImage: '/todos rede evolucao principal/0bd1ec12-cfcc-424d-bc8b-50aadeb5aeb8.JPG',
+    heroImage: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
     whatsapp: PHONE,
     whatsappMessage: 'Olá! Vim pelo site do Espaço Terapêutico Evolução e gostaria de mais informações sobre a Moradia Assistida.',
     whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site do Espaço Terapêutico Evolução e gostaria de mais informações sobre a Moradia Assistida.'),
@@ -263,7 +263,7 @@ export const clinics = {
     heroTitle: 'Centro Terapêutico Perseverança: um novo começo.',
     heroSubtitle:
       'Nossa nova unidade oferece um ambiente de paz, estrutura moderna e o mesmo padrão de excelência em tratamento e acolhimento que você já conhece.',
-    heroImage: '/fotos itape/2407c852-13c8-493d-a17f-ab5d6f01ab7f.JPG',
+    heroImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
     whatsapp: PHONE,
     whatsappMessage: 'Olá! Vim pelo site do Centro Terapêutico Perseverança e gostaria de mais informações.',
     whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site do Centro Terapêutico Perseverança e gostaria de mais informações.'),
@@ -315,7 +315,7 @@ export const clinics = {
     heroTitle: 'Litoral Sul: recuperação à beira-mar, em harmonia com a natureza.',
     heroSubtitle:
       'Um espaço terapêutico onde o ambiente natural, a tranquilidade do mar e o cuidado profissional se unem para promover renovação física, emocional e espiritual.',
-    heroImage: '/fotos litoral sul/21065ed2-5fa1-437d-9a68-851a48cdf7a8.JPG',
+    heroImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
     whatsapp: PHONE,
     whatsappMessage: 'Olá! Vim pelo site da unidade Litoral Sul e gostaria de mais informações.',
     whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site da unidade Litoral Sul e gostaria de mais informações.'),
@@ -367,7 +367,7 @@ export const clinics = {
     heroTitle: 'Vargem Grande Paulista: o melhor tratamento para dependência química e alcoolismo.',
     heroSubtitle:
       'Nossos tratamentos já libertaram centenas de pessoas que buscaram nossa ajuda. Equipe multidisciplinar, ambiente seguro e atendimento individualizado.',
-    heroImage: '/fotos unidade vargem grande/649b5ef0-738f-409e-9ab0-173574983117.JPG',
+    heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
     whatsapp: PHONE,
     whatsappMessage: 'Olá! Vim pelo site da unidade Vargem Grande Paulista Paulista e gostaria de mais informações.',
     whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site da unidade Vargem Grande Paulista Paulista e gostaria de mais informações.'),
