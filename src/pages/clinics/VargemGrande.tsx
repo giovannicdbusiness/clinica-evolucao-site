@@ -70,12 +70,12 @@ export default function VargemGrande() {
         primaryColor={theme.primary}
         primaryDark={theme.primaryDark}
         accentColor={theme.accent}
-        badge="Unidade Vargem Grande Paulista"
+        badge="Tratamento humanizado · 24h"
         trustSignals={['Equipe multidisciplinar', 'Ambiente seguro 24h', 'Atendimento humanizado']}
       />
 
       {/* Quem somos */}
-      <section className="py-20 md:py-24 bg-white">
+      <section className="py-14 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             <motion.div
@@ -97,9 +97,9 @@ export default function VargemGrande() {
               </h2>
               <div className="space-y-5 text-gray-600 text-base md:text-lg leading-relaxed">
                 <p>
-                  A unidade Vargem Grande Paulista é especializada no tratamento de dependência química,
-                  alcoolismo e transtornos psiquiátricos. Nosso compromisso é com a recuperação
-                  integral do paciente e o reencontro com a família.
+                  Nossa unidade é especializada no tratamento de dependência química, alcoolismo
+                  e transtornos psiquiátricos. Nosso compromisso é com a recuperação integral do
+                  paciente e o reencontro com a família.
                 </p>
                 <p>
                   Trabalhamos com terapia em grupo, palestras, atendimento individualizado e
@@ -164,7 +164,7 @@ export default function VargemGrande() {
       />
 
       {/* Cronograma 3 passos */}
-      <section className="py-20 md:py-24 bg-white">
+      <section className="py-14 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14 max-w-2xl mx-auto">
             <span
@@ -206,7 +206,7 @@ export default function VargemGrande() {
       </section>
 
       {/* Equipe */}
-      <section className="py-20 md:py-24" style={{ backgroundColor: theme.surface }}>
+      <section className="py-14 md:py-24" style={{ backgroundColor: theme.surface }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14 max-w-2xl mx-auto">
             <span
@@ -273,7 +273,7 @@ export default function VargemGrande() {
       />
 
       {/* Missão / Visão / Valores */}
-      <section className="py-20 md:py-24 bg-white">
+      <section className="py-14 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14 max-w-2xl mx-auto">
             <span
@@ -321,7 +321,7 @@ export default function VargemGrande() {
       </section>
 
       <TriagemForm
-        title="Triagem Unidade Vargem Grande Paulista"
+        title="Triagem"
         subtitle="Inicie agora o processo. Atendimento sigiloso e individualizado."
         clinicName={clinic.shortName}
         whatsappUrl={clinic.whatsappUrl}
@@ -343,7 +343,7 @@ export default function VargemGrande() {
 
       <FAQ
         title="Perguntas frequentes"
-        subtitle="As principais dúvidas sobre o tratamento na unidade Vargem Grande Paulista."
+        subtitle="As principais dúvidas sobre o tratamento em nossa unidade."
         items={clinic.faq}
         primaryColor={theme.primary}
         surface={theme.surface}
@@ -352,7 +352,7 @@ export default function VargemGrande() {
 
       {/* CTA Final */}
       <section
-        className="py-20 md:py-24 text-center px-4 relative overflow-hidden"
+        className="py-14 md:py-24 text-center px-4 relative overflow-hidden"
         style={{ backgroundColor: theme.primaryDark }}
       >
         <div
@@ -373,7 +373,7 @@ export default function VargemGrande() {
             A liberdade de recomeçar está ao alcance de uma ligação.
           </h2>
           <p className="text-white/90 text-base md:text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-            Fale com a unidade Vargem Grande Paulista e descubra como podemos ajudar você ou seu ente querido.
+            Fale com nossa equipe e descubra como podemos ajudar você ou seu ente querido.
           </p>
           <a
             href={clinic.whatsappUrl}

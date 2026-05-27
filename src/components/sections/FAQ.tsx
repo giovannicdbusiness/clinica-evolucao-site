@@ -31,7 +31,7 @@ export default function FAQ({
   };
 
   return (
-    <section id="faq" className="py-20 md:py-24" style={{ backgroundColor: surface }}>
+    <section id="faq" className="py-14 md:py-24" style={{ backgroundColor: surface }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
           <div className="lg:col-span-1 lg:sticky lg:top-28 lg:self-start">

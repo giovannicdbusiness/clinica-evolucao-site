@@ -49,7 +49,7 @@ export default function Perseveranca() {
       />
 
       {/* Sobre */}
-      <section className="py-20 md:py-24 bg-white">
+      <section className="py-14 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             <motion.div
@@ -66,13 +66,12 @@ export default function Perseveranca() {
                 Itapetininga · SP
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-[1.15] tracking-tight">
-                Sobre o Centro Terapêutico{' '}
-                <span style={{ color: theme.primary }}>Perseverança</span>
+                Sobre a <span style={{ color: theme.primary }}>nossa unidade</span>
               </h2>
               <div className="space-y-5 text-gray-600 text-base md:text-lg leading-relaxed">
                 <p>
-                  Localizada em <strong>Itapetininga</strong>, a Centro Terapêutico Perseverança nasce com
-                  o propósito de expandir nosso compromisso com a vida e a recuperação.
+                  Localizada em <strong>Itapetininga</strong>, nossa unidade nasce com o propósito
+                  de expandir nosso compromisso com a vida e a recuperação.
                 </p>
                 <p>
                   Nossa nova unidade foi cuidadosamente projetada para oferecer um ambiente
@@ -128,14 +127,6 @@ export default function Perseveranca() {
                   className="rounded-3xl shadow-elevation-2 w-full h-72 object-cover mt-10"
                 />
               </div>
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-3 rounded-2xl shadow-elevation-3 border border-gray-100">
-                <div
-                  className="w-16 h-16 rounded-xl flex items-center justify-center text-white font-bold text-3xl shadow-md"
-                  style={{ backgroundColor: theme.primary }}
-                >
-                  P
-                </div>
-              </div>
             </motion.div>
           </div>
         </div>
@@ -143,7 +134,7 @@ export default function Perseveranca() {
 
       {/* Stats */}
       <Stats
-        title="Por que escolher a Perseverança?"
+        title="Por que escolher nossa unidade?"
         subtitle="Uma unidade pensada para potencializar a recuperação em todos os aspectos."
         items={stats}
         primaryColor={theme.primary}
@@ -152,7 +143,7 @@ export default function Perseveranca() {
       />
 
       {/* Diferenciais */}
-      <section className="py-20 md:py-24 bg-white">
+      <section className="py-14 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14 max-w-2xl mx-auto">
             <span
@@ -234,7 +225,7 @@ export default function Perseveranca() {
       />
 
       <TriagemForm
-        title="Triagem Centro Terapêutico Perseverança"
+        title="Triagem"
         subtitle="Dê o primeiro passo rumo à recuperação em nossa nova unidade. Preencha os dados abaixo para uma avaliação inicial."
         clinicName={clinic.shortName}
         whatsappUrl={clinic.whatsappUrl}
@@ -255,8 +246,8 @@ export default function Perseveranca() {
       />
 
       <FAQ
-        title="Dúvidas frequentes sobre a nova unidade"
-        subtitle="Respostas para as principais dúvidas sobre a Centro Terapêutico Perseverança."
+        title="Dúvidas frequentes"
+        subtitle="Respostas para as principais dúvidas sobre nossa nova unidade."
         items={clinic.faq}
         primaryColor={theme.primary}
         surface={theme.surface}
@@ -265,7 +256,7 @@ export default function Perseveranca() {
 
       {/* CTA Final */}
       <section
-        className="py-20 md:py-24 text-center px-4 relative overflow-hidden"
+        className="py-14 md:py-24 text-center px-4 relative overflow-hidden"
         style={{ backgroundColor: theme.primaryDark }}
       >
         <div
@@ -286,8 +277,8 @@ export default function Perseveranca() {
             Um novo começo está mais perto do que você imagina.
           </h2>
           <p className="text-white/90 text-base md:text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-            Entre em contato com a Centro Terapêutico Perseverança e descubra como podemos ajudar você ou seu
-            ente querido a iniciar uma nova jornada de vida.
+            Entre em contato com nossa equipe e descubra como podemos ajudar você ou seu ente
+            querido a iniciar uma nova jornada de vida.
           </p>
           <a
             href={clinic.whatsappUrl}

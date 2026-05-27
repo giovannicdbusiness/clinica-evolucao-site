@@ -48,7 +48,7 @@ export default function LitoralSul() {
       />
 
       {/* 3 destaques */}
-      <section className="py-16 md:py-20 -mt-24 relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-10 md:py-20 md:-mt-24 relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
           {[
             { icon: Waves, title: 'Terapia à beira-mar', desc: 'A serenidade do oceano como aliada do tratamento.' },
@@ -78,7 +78,7 @@ export default function LitoralSul() {
       </section>
 
       {/* Sobre */}
-      <section className="py-20 md:py-24 bg-white">
+      <section className="py-14 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             <motion.div
@@ -97,15 +97,6 @@ export default function LitoralSul() {
                 alt="Unidade Litoral Sul - sala de convivência"
                 className="relative rounded-3xl shadow-elevation-3 w-full object-cover h-[460px] md:h-[520px]"
               />
-              <div className="absolute -bottom-6 -right-2 md:-right-6 bg-white/95 backdrop-blur-sm px-5 py-3 rounded-2xl shadow-elevation-3 font-bold flex items-center gap-2 border border-gray-100">
-                <div
-                  className="w-9 h-9 rounded-md flex items-center justify-center text-white text-sm shadow-sm"
-                  style={{ backgroundColor: theme.primary }}
-                >
-                  L
-                </div>
-                <span style={{ color: theme.primary }}>LITORAL SUL</span>
-              </div>
             </motion.div>
 
             <motion.div
@@ -119,15 +110,15 @@ export default function LitoralSul() {
                 className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4"
                 style={{ backgroundColor: `${theme.primary}15`, color: theme.primary }}
               >
-                Unidade Litoral Sul
+                Beira-mar
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-[1.15] tracking-tight">
-                Sobre a <span style={{ color: theme.primary }}>unidade Litoral Sul</span>
+                Sobre a <span style={{ color: theme.primary }}>nossa unidade</span>
               </h2>
               <div className="space-y-5 text-gray-600 text-base md:text-lg leading-relaxed">
                 <p>
-                  Nossa unidade Litoral Sul é um espaço terapêutico onde o som do mar e o
-                  contato direto com a natureza compõem parte fundamental do processo de cura.
+                  Um espaço terapêutico onde o som do mar e o contato direto com a natureza
+                  compõem parte fundamental do processo de cura.
                 </p>
                 <p>
                   Combinamos um programa terapêutico estruturado com práticas integrativas,
@@ -177,7 +168,7 @@ export default function LitoralSul() {
 
       <CTABanner
         title="Recupere-se em harmonia com a natureza."
-        subtitle="Fale com nossa equipe e conheça a unidade Litoral Sul."
+        subtitle="Fale com nossa equipe e conheça nossa unidade."
         buttonText="QUERO CONHECER"
         buttonUrl={clinic.whatsappUrl}
         bgColor={theme.cta}
@@ -197,7 +188,7 @@ export default function LitoralSul() {
       />
 
       <TriagemForm
-        title="Triagem Litoral Sul"
+        title="Triagem"
         subtitle="Inicie agora o seu processo de recuperação. Preencha os dados e nossa equipe entrará em contato com total sigilo."
         clinicName={clinic.shortName}
         whatsappUrl={clinic.whatsappUrl}
@@ -218,7 +209,7 @@ export default function LitoralSul() {
       />
 
       <FAQ
-        title="Dúvidas sobre a unidade Litoral Sul"
+        title="Dúvidas frequentes"
         subtitle="Tire as principais dúvidas sobre o tratamento, a estrutura e o funcionamento do espaço."
         items={clinic.faq}
         primaryColor={theme.primary}
@@ -228,7 +219,7 @@ export default function LitoralSul() {
 
       {/* CTA Final */}
       <section
-        className="py-20 md:py-24 text-center px-4 relative overflow-hidden"
+        className="py-14 md:py-24 text-center px-4 relative overflow-hidden"
         style={{ backgroundColor: theme.primaryDark }}
       >
         <div
@@ -249,7 +240,7 @@ export default function LitoralSul() {
             Uma nova vida começa com um passo.
           </h2>
           <p className="text-white/90 text-base md:text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-            Entre em contato com a unidade Litoral Sul. Atendimento confidencial 24h.
+            Entre em contato com nossa equipe. Atendimento confidencial 24h.
           </p>
           <a
             href={clinic.whatsappUrl}

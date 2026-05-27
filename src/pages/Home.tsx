@@ -63,7 +63,7 @@ export default function Home() {
       />
 
       {/* Quick highlights - 3 cards */}
-      <section className="py-16 md:py-20 -mt-24 relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-10 md:py-20 md:-mt-24 relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
           {[
             {
@@ -122,7 +122,7 @@ export default function Home() {
       </section>
 
       {/* Sobre */}
-      <section className="py-20 md:py-24 bg-white">
+      <section className="py-14 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             <motion.div
@@ -219,7 +219,7 @@ export default function Home() {
       />
 
       {/* Serviços */}
-      <section className="py-20 md:py-24 bg-white">
+      <section className="py-14 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14 max-w-2xl mx-auto">
             <span
@@ -339,17 +339,9 @@ export default function Home() {
                         }}
                       />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-                    <div className="absolute top-4 left-4 flex items-center gap-2">
-                      <div
-                        className="w-11 h-11 rounded-tl-lg rounded-br-lg rounded-tr-sm rounded-bl-sm flex items-center justify-center text-white font-extrabold shadow-md"
-                        style={{ backgroundColor: u.theme.primary }}
-                      >
-                        {u.theme.initial}
-                      </div>
-                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4">
-                      <span className="text-[10px] uppercase tracking-widest font-bold text-white/90 bg-white/15 backdrop-blur-sm px-2.5 py-1 rounded-full inline-block">
+                      <span className="text-[10px] uppercase tracking-widest font-bold text-white/95 bg-white/15 backdrop-blur-sm px-2.5 py-1 rounded-full inline-block">
                         {u.region}
                       </span>
                     </div>
@@ -423,7 +415,7 @@ export default function Home() {
 
       {/* CTA Final */}
       <section
-        className="py-20 md:py-24 text-center px-4 relative overflow-hidden"
+        className="py-14 md:py-24 text-center px-4 relative overflow-hidden"
         style={{ backgroundColor: theme.primaryDark }}
       >
         <div

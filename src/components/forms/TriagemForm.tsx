@@ -110,7 +110,7 @@ export default function TriagemForm({
   } as React.CSSProperties;
 
   return (
-    <section id="triagem" className="py-20 md:py-24 bg-white">
+    <section id="triagem" className="py-14 md:py-24 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <span

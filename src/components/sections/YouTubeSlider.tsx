@@ -66,7 +66,7 @@ export default function YouTubeSlider({
   );
 
   return (
-    <section id="youtube" className="py-20 md:py-24" style={{ backgroundColor: surface }}>
+    <section id="youtube" className="py-14 md:py-24" style={{ backgroundColor: surface }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between md:items-end mb-12 gap-6">
           <div className="max-w-2xl">

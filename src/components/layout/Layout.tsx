@@ -158,12 +158,11 @@ export default function Layout() {
                             className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors border-t border-gray-50 first:border-0 group cursor-pointer"
                             style={isActive ? { backgroundColor: `${c.theme.primary}08` } : undefined}
                           >
-                            <div
-                              className="w-10 h-10 rounded-tl-lg rounded-br-lg rounded-tr-sm rounded-bl-sm flex items-center justify-center text-white font-bold flex-shrink-0 shadow-sm"
+                            <span
+                              className="w-1 h-10 rounded-full flex-shrink-0"
                               style={{ backgroundColor: c.theme.primary }}
-                            >
-                              {c.theme.initial}
-                            </div>
+                              aria-hidden="true"
+                            />
                             <div className="flex-grow">
                               <div className="font-bold text-sm text-gray-900">{c.shortName}</div>
                               <div className="text-xs text-gray-500">{c.region}</div>
@@ -237,12 +236,11 @@ export default function Layout() {
                       color: isActive ? c.theme.primary : '#1E293B',
                     }}
                   >
-                    <div
-                      className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-sm flex-shrink-0"
+                    <span
+                      className="w-1 h-9 rounded-full flex-shrink-0"
                       style={{ backgroundColor: c.theme.primary }}
-                    >
-                      {c.theme.initial}
-                    </div>
+                      aria-hidden="true"
+                    />
                     <div className="flex flex-col">
                       <span className="font-bold">{c.shortName}</span>
                       <span className="text-xs text-gray-500 font-normal">{c.region}</span>

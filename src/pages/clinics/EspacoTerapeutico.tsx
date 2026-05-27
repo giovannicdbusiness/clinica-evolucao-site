@@ -72,7 +72,7 @@ export default function EspacoTerapeutico() {
       />
 
       {/* Quick highlights — 2 pilares (Moradia + Estrutura), reforçando o foco da página */}
-      <section className="py-16 md:py-20 -mt-24 relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-10 md:py-20 md:-mt-24 relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
           {[
             {
@@ -253,7 +253,7 @@ export default function EspacoTerapeutico() {
       />
 
       {/* Detalhamento da estrutura */}
-      <section className="py-20 md:py-24 bg-white">
+      <section className="py-14 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14 max-w-2xl mx-auto">
             <span
@@ -299,7 +299,7 @@ export default function EspacoTerapeutico() {
 
       {/* CTA Final */}
       <section
-        className="py-20 md:py-24 text-center px-4 relative overflow-hidden"
+        className="py-14 md:py-24 text-center px-4 relative overflow-hidden"
         style={{ backgroundColor: theme.primaryDark }}
       >
         <div

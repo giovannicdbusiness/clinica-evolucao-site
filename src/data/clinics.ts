@@ -93,7 +93,6 @@ function buildGallery(folder: string, files: string[], unitName: string): Clinic
 const galleryEvolucao = buildGallery(
   'todos rede evolucao principal',
   [
-    '07b6655d-4812-4bad-ac01-123977d26ca6.JPG',
     '0bd1ec12-cfcc-424d-bc8b-50aadeb5aeb8.JPG',
     '0c05d0f7-fd45-48ef-9fe1-1e62886c5a64.JPG',
     '1f48ffa0-8aea-484d-8806-5f7142ec47bc.JPG',
@@ -107,6 +106,7 @@ const galleryEvolucao = buildGallery(
     '98ec993a-1a2b-4064-abc2-76658abd0302.JPG',
     'd1b0a3b0-9560-451c-8d5a-c7fb7a70dcb9.JPG',
     'fbc30c0d-90c0-421c-a548-adbe3b08c912.JPG',
+    '07b6655d-4812-4bad-ac01-123977d26ca6.JPG',
   ],
   'Rede Evolução',
 );
@@ -127,8 +127,6 @@ const galleryPerseveranca = buildGallery(
 const galleryLitoralSul = buildGallery(
   'fotos litoral sul',
   [
-    '009c4e72-9eca-4ebb-bd6c-275b8fb64bcb.JPG',
-    '21065ed2-5fa1-437d-9a68-851a48cdf7a8.JPG',
     '35a77914-11b4-45f1-96d7-c6ffbe0a0f4b.JPG',
     '42888e7e-6ef8-4425-9637-008c47269d21.JPG',
     '549f2ccc-8a5a-418a-9357-5879673d55d2.JPG',
@@ -140,6 +138,8 @@ const galleryLitoralSul = buildGallery(
     'd7a809b2-cc95-4b3e-9dcd-88a8eb38d8d8.JPG',
     'e96fa315-12f0-4af8-95c3-86b3a531d006.JPG',
     'f98cb421-13d6-47e9-9af0-057956f41b67.JPG',
+    '009c4e72-9eca-4ebb-bd6c-275b8fb64bcb.JPG',
+    '21065ed2-5fa1-437d-9a68-851a48cdf7a8.JPG',
   ],
   'Unidade Litoral Sul',
 );
@@ -147,12 +147,12 @@ const galleryLitoralSul = buildGallery(
 const galleryVargemGrande = buildGallery(
   'fotos unidade vargem grande',
   [
-    '0501efcc-11f1-4834-96a0-bd97cd57e1b6.JPG',
-    '4c515e66-0faa-4f8e-9558-430d835796fc.JPG',
-    '5d6ea6a2-c04d-4439-9eec-59876da87a29.JPG',
     '649b5ef0-738f-409e-9ab0-173574983117.JPG',
     '68c28c2f-d0b1-46e1-805b-9c8dce2d9c9f.JPG',
     '6e8a9363-0fea-4552-bcf8-e9cf52c5552c.JPG',
+    '0501efcc-11f1-4834-96a0-bd97cd57e1b6.JPG',
+    '4c515e66-0faa-4f8e-9558-430d835796fc.JPG',
+    '5d6ea6a2-c04d-4439-9eec-59876da87a29.JPG',
     '7761bdec-31d5-49b1-a77d-246a0fe510fc.JPG',
     '85508165-cf8f-4098-b4c8-0f18498144ed.JPG',
     '8836a955-eb55-4cc6-a236-3472c57c204b.JPG',
@@ -229,7 +229,7 @@ export const clinics = {
     shortName: 'Espaço Terapêutico Evolução',
     region: 'Moradia Assistida · Estrutura completa',
     tagline: 'Moradia Assistida e estrutura de alto padrão',
-    heroTitle: 'Espaço Terapêutico Evolução: onde a moradia se transforma em recomeço.',
+    heroTitle: 'Onde a moradia se transforma em recomeço.',
     heroSubtitle:
       'Um ambiente integralmente projetado para a Moradia Terapêutica Assistida, com infraestrutura completa e cuidado contínuo para o seu processo de recuperação e autonomia.',
     heroImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
@@ -260,7 +260,7 @@ export const clinics = {
     shortName: 'Centro Terapêutico Perseverança',
     region: 'Centro Terapêutico · Itapetininga, SP',
     tagline: 'Nova unidade · Ambiente acolhedor',
-    heroTitle: 'Centro Terapêutico Perseverança: um novo começo.',
+    heroTitle: 'Um novo começo, em meio à natureza.',
     heroSubtitle:
       'Nossa nova unidade oferece um ambiente de paz, estrutura moderna e o mesmo padrão de excelência em tratamento e acolhimento que você já conhece.',
     heroImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
@@ -312,7 +312,7 @@ export const clinics = {
     shortName: 'Unidade Litoral Sul',
     region: 'Unidade · Beira-mar',
     tagline: 'Recuperação em harmonia com a natureza',
-    heroTitle: 'Litoral Sul: recuperação à beira-mar, em harmonia com a natureza.',
+    heroTitle: 'Recuperação à beira-mar, em harmonia com a natureza.',
     heroSubtitle:
       'Um espaço terapêutico onde o ambiente natural, a tranquilidade do mar e o cuidado profissional se unem para promover renovação física, emocional e espiritual.',
     heroImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
@@ -364,7 +364,7 @@ export const clinics = {
     shortName: 'Unidade Vargem Grande Paulista',
     region: 'Unidade',
     tagline: 'Tratamento completo em ambiente confortável',
-    heroTitle: 'Vargem Grande Paulista: o melhor tratamento para dependência química e alcoolismo.',
+    heroTitle: 'O melhor tratamento para dependência química e alcoolismo.',
     heroSubtitle:
       'Nossos tratamentos já libertaram centenas de pessoas que buscaram nossa ajuda. Equipe multidisciplinar, ambiente seguro e atendimento individualizado.',
     heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
