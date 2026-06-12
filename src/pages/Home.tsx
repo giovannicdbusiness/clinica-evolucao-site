@@ -22,6 +22,8 @@ import {
   Calendar,
   HeartHandshake,
   ArrowRight,
+  Video,
+  CalendarClock,
 } from 'lucide-react';
 import { clinics, unitsForHub } from '@/data/clinics';
 
@@ -59,7 +61,6 @@ export default function Home() {
         primaryDark={theme.primaryDark}
         accentColor={theme.accent}
         badge="Atendimento sigiloso 24h"
-        trustSignals={['Equipe médica especializada', 'Sigilo absoluto', '+16 anos de experiência']}
       />
 
       {/* Quick highlights - 3 cards */}
@@ -124,7 +125,7 @@ export default function Home() {
       {/* Sobre */}
       <section className="py-14 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -217,6 +218,92 @@ export default function Home() {
         accentColor={theme.cta}
         bgColor={theme.surface}
       />
+
+      {/* Auto Ajuda - Encontro semanal */}
+      <section className="py-14 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-50px' }}
+            transition={{ duration: 0.6 }}
+            className="relative overflow-hidden rounded-3xl p-8 md:p-14 shadow-elevation-3"
+            style={{
+              background: `linear-gradient(135deg, ${theme.primary} 0%, ${theme.primaryDark} 100%)`,
+            }}
+          >
+            <div
+              className="absolute -top-32 -right-32 w-96 h-96 opacity-20 rounded-full blur-3xl pointer-events-none"
+              style={{ backgroundColor: theme.accent }}
+            />
+            <div
+              className="absolute -bottom-24 -left-24 w-80 h-80 opacity-10 rounded-full blur-3xl pointer-events-none"
+              style={{ backgroundColor: theme.cta }}
+            />
+
+            <div className="relative grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-center">
+              <div className="text-white">
+                <span
+                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-5 bg-white/15 backdrop-blur-sm"
+                  style={{ color: theme.accent }}
+                >
+                  <Video size={14} /> Encontros semanais · Online
+                </span>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-[1.1] tracking-tight">
+                  Encontro de Auto Ajuda com Bruno Ferrari
+                </h2>
+                <p className="text-white/90 text-base md:text-lg leading-relaxed mb-7 max-w-2xl">
+                  Toda <strong>terça-feira às 20h</strong>, um encontro aberto pelo Zoom com o
+                  Bruno Ferrari para conversar, escutar e apoiar quem busca recomeçar. Participe
+                  de onde estiver — basta entrar pelo link.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="https://us06web.zoom.us/j/82041189511"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full font-bold text-base shadow-elevation-2 hover:shadow-elevation-3 transition-all duration-200 cursor-pointer"
+                    style={{ backgroundColor: theme.accent, color: '#1A4D2E' }}
+                  >
+                    <Video size={18} strokeWidth={2.4} />
+                    PARTICIPAR PELO ZOOM
+                    <ArrowRight
+                      size={18}
+                      className="transition-transform duration-200 group-hover:translate-x-0.5"
+                    />
+                  </a>
+                  <a
+                    href={clinic.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full font-bold text-base text-white border-2 border-white/30 hover:border-white/60 transition-colors duration-200 cursor-pointer"
+                  >
+                    SABER MAIS
+                  </a>
+                </div>
+              </div>
+
+              {/* Card lateral com horário */}
+              <div className="hidden lg:flex flex-col items-center justify-center bg-white/12 backdrop-blur-sm border border-white/15 rounded-3xl p-8 min-w-[200px]">
+                <CalendarClock size={36} className="text-white/80 mb-3" />
+                <div className="text-white/70 text-xs uppercase tracking-widest font-bold mb-1">
+                  Toda
+                </div>
+                <div className="text-white text-3xl font-extrabold mb-1 tracking-tight">
+                  Terça-feira
+                </div>
+                <div className="text-white/70 text-xs uppercase tracking-widest font-bold mb-1">
+                  às
+                </div>
+                <div className="text-white text-4xl font-extrabold tracking-tight">
+                  20h
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Serviços */}
       <section className="py-14 md:py-24 bg-white">
@@ -387,10 +474,12 @@ export default function Home() {
         ctaColor={theme.cta}
       />
 
-      {/* YouTube */}
+      {/* YouTube — últimos vídeos do canal do Bruno Ferrari (via /api/youtube-recent) */}
       <YouTubeSlider
-        title="Conheça mais sobre nosso trabalho"
+        title="Conteúdos recentes do Bruno Ferrari"
+        subtitle="Os vídeos mais recentes do canal do Bruno Ferrari sobre tratamento, recuperação e auto ajuda."
         videos={clinic.videos}
+        fetchRecent
         primaryColor={theme.primary}
         primaryDark={theme.primaryDark}
         surface={theme.surface}

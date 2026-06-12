@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
 import Hero from '@/components/sections/Hero';
-import YouTubeSlider from '@/components/sections/YouTubeSlider';
 import TriagemForm from '@/components/forms/TriagemForm';
-import FAQ from '@/components/sections/FAQ';
 import Gallery from '@/components/sections/Gallery';
+import MiniGallery from '@/components/sections/MiniGallery';
 import CTABanner from '@/components/sections/CTABanner';
 import Stats from '@/components/sections/Stats';
 import {
@@ -12,9 +11,6 @@ import {
   ShieldCheck,
   Award,
   Heart,
-  Activity,
-  BookOpen,
-  HandHeart,
   Calendar,
   HeartHandshake,
   ArrowRight,
@@ -30,13 +26,6 @@ export default function VargemGrande() {
     { icon: Users, value: '+1.000', countUpTo: 1000, countUpPrefix: '+', label: 'Pacientes', description: 'Vidas transformadas' },
     { icon: Stethoscope, value: '24h', label: 'Atendimento', description: 'Equipe disponível sempre' },
     { icon: Award, value: '✓', label: 'Equipe multidisciplinar', description: 'Profissionais qualificados' },
-  ];
-
-  const equipe = [
-    { icon: Stethoscope, label: 'Equipe médica', desc: 'Psiquiatras, clínicos e enfermagem 24h' },
-    { icon: BookOpen, label: 'Psicólogos', desc: 'Atendimento individual e em grupo' },
-    { icon: Activity, label: 'Atividades físicas', desc: 'Educadores físicos e nutricionistas' },
-    { icon: HandHeart, label: 'Monitores', desc: 'Acompanhamento integral do dia a dia' },
   ];
 
   const passos = [
@@ -70,14 +59,13 @@ export default function VargemGrande() {
         primaryColor={theme.primary}
         primaryDark={theme.primaryDark}
         accentColor={theme.accent}
-        badge="Tratamento humanizado · 24h"
-        trustSignals={['Equipe multidisciplinar', 'Ambiente seguro 24h', 'Atendimento humanizado']}
+        badge="Vargem Grande Paulista, SP"
       />
 
       {/* Quem somos */}
       <section className="py-14 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -89,7 +77,7 @@ export default function VargemGrande() {
                 className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4"
                 style={{ backgroundColor: `${theme.primary}15`, color: theme.primary }}
               >
-                Quem somos
+                Vargem Grande Paulista, SP
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-[1.15] tracking-tight">
                 Devolvemos o bem-estar à{' '}
@@ -97,9 +85,10 @@ export default function VargemGrande() {
               </h2>
               <div className="space-y-5 text-gray-600 text-base md:text-lg leading-relaxed">
                 <p>
-                  Nossa unidade é especializada no tratamento de dependência química, alcoolismo
-                  e transtornos psiquiátricos. Nosso compromisso é com a recuperação integral do
-                  paciente e o reencontro com a família.
+                  Localizada em <strong>Vargem Grande Paulista</strong>, nossa unidade é
+                  especializada no tratamento de dependência química, alcoolismo e transtornos
+                  psiquiátricos, com mais de <strong>16 anos de tradição</strong> e mais de{' '}
+                  <strong>1.000 vidas transformadas</strong>.
                 </p>
                 <p>
                   Trabalhamos com terapia em grupo, palestras, atendimento individualizado e
@@ -141,14 +130,20 @@ export default function VargemGrande() {
               className="lg:w-1/2 relative"
             >
               <div
-                className="absolute -inset-4 rounded-3xl transform rotate-2 opacity-[0.08]"
+                className="absolute -inset-4 rounded-3xl transform rotate-2 opacity-[0.08] pointer-events-none"
                 style={{ backgroundColor: theme.primary }}
               />
-              <img
-                src="/fotos unidade vargem grande/68c28c2f-d0b1-46e1-805b-9c8dce2d9c9f.JPG"
-                alt="Unidade Vargem Grande Paulista - fachada"
-                className="relative rounded-3xl shadow-elevation-3 w-full object-cover h-[460px] md:h-[520px]"
-              />
+              <div className="relative">
+                <MiniGallery
+                  images={[
+                    { src: '/fotos unidade vargem grande/649b5ef0-738f-409e-9ab0-173574983117.JPG', alt: 'Piscina da unidade Vargem Grande Paulista' },
+                    { src: '/fotos unidade vargem grande/68c28c2f-d0b1-46e1-805b-9c8dce2d9c9f.JPG', alt: 'Fachada da unidade Vargem Grande Paulista' },
+                    { src: '/fotos unidade vargem grande/6e8a9363-0fea-4552-bcf8-e9cf52c5552c.JPG', alt: 'Varanda da unidade Vargem Grande Paulista' },
+                    { src: '/fotos unidade vargem grande/4c515e66-0faa-4f8e-9558-430d835796fc.JPG', alt: 'Quartos da unidade Vargem Grande Paulista' },
+                  ]}
+                  primaryColor={theme.primary}
+                />
+              </div>
             </motion.div>
           </div>
         </div>
@@ -205,52 +200,6 @@ export default function VargemGrande() {
         </div>
       </section>
 
-      {/* Equipe */}
-      <section className="py-14 md:py-24" style={{ backgroundColor: theme.surface }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14 max-w-2xl mx-auto">
-            <span
-              className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4"
-              style={{ backgroundColor: `${theme.primary}15`, color: theme.primary }}
-            >
-              Equipe
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight" style={{ color: theme.primary }}>
-              Equipe multidisciplinar
-            </h2>
-            <p className="text-gray-600 text-base md:text-lg">
-              Profissionais qualificados e dedicados à sua recuperação em todas as etapas do
-              tratamento.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-6">
-            {equipe.map((m, i) => {
-              const Icon = m.icon;
-              return (
-                <motion.div
-                  key={m.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-40px' }}
-                  transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className="bg-white p-6 md:p-7 rounded-3xl shadow-elevation-1 hover:shadow-elevation-2 transition-shadow duration-300 text-center border border-gray-100"
-                >
-                  <div
-                    className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-4"
-                    style={{ backgroundColor: `${theme.primary}15`, color: theme.primary }}
-                  >
-                    <Icon size={28} strokeWidth={1.8} />
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-2">{m.label}</h4>
-                  <p className="text-sm text-gray-500 leading-relaxed">{m.desc}</p>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       <CTABanner
         title="Sua recuperação começa aqui."
         subtitle={`Atendimento sigiloso 24 horas pelo telefone ${clinic.phoneDisplay}.`}
@@ -272,53 +221,6 @@ export default function VargemGrande() {
         surface={theme.surface}
       />
 
-      {/* Missão / Visão / Valores */}
-      <section className="py-14 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14 max-w-2xl mx-auto">
-            <span
-              className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4"
-              style={{ backgroundColor: `${theme.primary}15`, color: theme.primary }}
-            >
-              Nosso compromisso
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight" style={{ color: theme.primary }}>
-              Missão, Visão e Valores
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Missão',
-                desc: 'Vencer transtornos causados por substâncias psicoativas, devolvendo saúde, dignidade e esperança a cada paciente e familiar.',
-              },
-              {
-                title: 'Visão',
-                desc: 'Ser referência em atendimento cauteloso, individualizado e humanizado em tratamento de dependência química e alcoolismo.',
-              },
-              {
-                title: 'Valores',
-                desc: 'Empatia, sigilo absoluto, profissionalismo, compromisso com resultados e cuidado integral com paciente e família.',
-              },
-            ].map((b, i) => (
-              <motion.div
-                key={b.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-8 rounded-3xl shadow-elevation-1 hover:shadow-elevation-2 transition-shadow duration-300 bg-gray-50/60 border-t-4"
-                style={{ borderColor: theme.primary }}
-              >
-                <h3 className="font-bold text-2xl mb-4 tracking-tight" style={{ color: theme.primary }}>
-                  {b.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">{b.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <TriagemForm
         title="Triagem"
@@ -330,24 +232,6 @@ export default function VargemGrande() {
         primaryDark={theme.primaryDark}
         surface={theme.surface}
         ctaColor={theme.cta}
-      />
-
-      <YouTubeSlider
-        title="Vídeos da nossa rede"
-        subtitle="Acompanhe conteúdos, depoimentos e informações sobre nosso trabalho."
-        videos={clinic.videos}
-        primaryColor={theme.primary}
-        primaryDark={theme.primaryDark}
-        surface={theme.surface}
-      />
-
-      <FAQ
-        title="Perguntas frequentes"
-        subtitle="As principais dúvidas sobre o tratamento em nossa unidade."
-        items={clinic.faq}
-        primaryColor={theme.primary}
-        surface={theme.surface}
-        whatsappUrl={clinic.whatsappUrl}
       />
 
       {/* CTA Final */}

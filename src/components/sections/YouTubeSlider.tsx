@@ -1,6 +1,6 @@
 import useEmblaCarousel from 'embla-carousel-react';
 import { ArrowRight, ChevronLeft, ChevronRight, Youtube } from 'lucide-react';
-import { useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 interface Video {
   id: string;
@@ -11,20 +11,45 @@ interface Video {
 interface YouTubeSliderProps {
   title: string;
   subtitle?: string;
+  /** Fallback de vídeos exibidos caso `fetchRecent` esteja off ou a API falhe. */
   videos: Video[];
   primaryColor?: string;
   primaryDark?: string;
   surface?: string;
+  /** Quando true, busca os vídeos mais recentes do canal via /api/youtube-recent. */
+  fetchRecent?: boolean;
 }
 
 export default function YouTubeSlider({
   title,
   subtitle = 'Acompanhe nossos conteúdos, depoimentos e informações importantes sobre tratamento e recuperação.',
-  videos,
+  videos: initialVideos,
   primaryColor = '#5A9EA8',
   primaryDark = '#4A8C96',
   surface = '#F4F4F0',
+  fetchRecent = false,
 }: YouTubeSliderProps) {
+  const [videos, setVideos] = useState<Video[]>(initialVideos);
+
+  useEffect(() => {
+    if (!fetchRecent) return;
+    let cancelled = false;
+    fetch('/api/youtube-recent')
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error('bad status'))))
+      .then((data: { videos?: Video[] }) => {
+        if (cancelled) return;
+        if (Array.isArray(data.videos) && data.videos.length > 0) {
+          setVideos(data.videos.slice(0, 6));
+        }
+      })
+      .catch(() => {
+        // mantém initialVideos como fallback gracioso
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [fetchRecent]);
+
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     loop: true,

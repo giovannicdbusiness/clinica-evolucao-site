@@ -30,6 +30,7 @@ export interface Clinic {
   brand: string;
   shortName: string;
   region: string;
+  city: string;
   tagline: string;
   heroTitle: string;
   heroSubtitle: string;
@@ -196,7 +197,8 @@ export const clinics = {
     path: '/',
     brand: 'REDE EVOLUÇÃO',
     shortName: 'Rede Evolução',
-    region: 'Espaço Terapêutico',
+    region: '4 unidades · Atendimento em todo o Brasil',
+    city: 'Atendimento em todo o Brasil',
     tagline: 'Tratamento humanizado e estrutura completa',
     heroTitle: 'Aqui, você não está sozinho. Cuidamos de você e da sua história.',
     heroSubtitle:
@@ -227,11 +229,12 @@ export const clinics = {
     path: '/espaco-terapeutico',
     brand: 'ESPAÇO TERAPÊUTICO',
     shortName: 'Espaço Terapêutico Evolução',
-    region: 'Moradia Assistida · Estrutura completa',
+    region: 'São Bernardo do Campo, SP',
+    city: 'São Bernardo do Campo, SP',
     tagline: 'Moradia Assistida e estrutura de alto padrão',
     heroTitle: 'Onde a moradia se transforma em recomeço.',
     heroSubtitle:
-      'Um ambiente integralmente projetado para a Moradia Terapêutica Assistida, com infraestrutura completa e cuidado contínuo para o seu processo de recuperação e autonomia.',
+      'Em São Bernardo do Campo, um ambiente integralmente projetado para a Moradia Terapêutica Assistida — infraestrutura completa e cuidado contínuo para a sua recuperação e autonomia.',
     heroImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
     whatsapp: PHONE,
     whatsappMessage: 'Olá! Vim pelo site do Espaço Terapêutico Evolução e gostaria de mais informações sobre a Moradia Assistida.',
@@ -258,11 +261,12 @@ export const clinics = {
     path: '/perseveranca',
     brand: 'PERSEVERANÇA',
     shortName: 'Centro Terapêutico Perseverança',
-    region: 'Centro Terapêutico · Itapetininga, SP',
+    region: 'Itapetininga, SP',
+    city: 'Itapetininga, SP',
     tagline: 'Nova unidade · Ambiente acolhedor',
     heroTitle: 'Um novo começo, em meio à natureza.',
     heroSubtitle:
-      'Nossa nova unidade oferece um ambiente de paz, estrutura moderna e o mesmo padrão de excelência em tratamento e acolhimento que você já conhece.',
+      'Em Itapetininga, um sítio terapêutico em meio à natureza, com ambiente de paz, estrutura moderna e o mesmo padrão de excelência em tratamento e acolhimento da Rede Evolução.',
     heroImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
     whatsapp: PHONE,
     whatsappMessage: 'Olá! Vim pelo site do Centro Terapêutico Perseverança e gostaria de mais informações.',
@@ -310,11 +314,12 @@ export const clinics = {
     path: '/litoral-sul',
     brand: 'LITORAL SUL',
     shortName: 'Unidade Litoral Sul',
-    region: 'Unidade · Beira-mar',
+    region: 'Caraguatatuba, SP',
+    city: 'Caraguatatuba, SP',
     tagline: 'Recuperação em harmonia com a natureza',
     heroTitle: 'Recuperação à beira-mar, em harmonia com a natureza.',
     heroSubtitle:
-      'Um espaço terapêutico onde o ambiente natural, a tranquilidade do mar e o cuidado profissional se unem para promover renovação física, emocional e espiritual.',
+      'Em Caraguatatuba, no litoral norte de São Paulo, um espaço terapêutico beira-mar onde a natureza e o cuidado profissional se unem para promover renovação física, emocional e espiritual.',
     heroImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
     whatsapp: PHONE,
     whatsappMessage: 'Olá! Vim pelo site da unidade Litoral Sul e gostaria de mais informações.',
@@ -362,12 +367,13 @@ export const clinics = {
     path: '/vargem-grande',
     brand: 'VARGEM GRANDE PAULISTA',
     shortName: 'Unidade Vargem Grande Paulista',
-    region: 'Unidade',
+    region: 'Vargem Grande Paulista, SP',
+    city: 'Vargem Grande Paulista, SP',
     tagline: 'Tratamento completo em ambiente confortável',
     heroTitle: 'O melhor tratamento para dependência química e alcoolismo.',
     heroSubtitle:
-      'Nossos tratamentos já libertaram centenas de pessoas que buscaram nossa ajuda. Equipe multidisciplinar, ambiente seguro e atendimento individualizado.',
-    heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+      'Nossos tratamentos já libertaram mais de 1.000 pessoas que buscaram nossa ajuda. Equipe multidisciplinar, ambiente seguro e atendimento individualizado.',
+    heroImage: '/fotos unidade vargem grande/649b5ef0-738f-409e-9ab0-173574983117.JPG',
     whatsapp: PHONE,
     whatsappMessage: 'Olá! Vim pelo site da unidade Vargem Grande Paulista Paulista e gostaria de mais informações.',
     whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site da unidade Vargem Grande Paulista Paulista e gostaria de mais informações.'),

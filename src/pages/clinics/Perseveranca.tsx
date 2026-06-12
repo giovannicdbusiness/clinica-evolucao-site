@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
 import Hero from '@/components/sections/Hero';
-import YouTubeSlider from '@/components/sections/YouTubeSlider';
 import TriagemForm from '@/components/forms/TriagemForm';
-import FAQ from '@/components/sections/FAQ';
 import Gallery from '@/components/sections/Gallery';
+import MiniGallery from '@/components/sections/MiniGallery';
 import CTABanner from '@/components/sections/CTABanner';
 import Stats from '@/components/sections/Stats';
 import {
@@ -44,14 +43,13 @@ export default function Perseveranca() {
         primaryColor={theme.primary}
         primaryDark={theme.primaryDark}
         accentColor={theme.accent}
-        badge="Nova unidade · Itapetininga - SP"
-        trustSignals={['Ambiente arborizado', 'Sigilo absoluto', 'Atendimento 24h']}
+        badge="Itapetininga, SP · Ambiente arborizado"
       />
 
       {/* Sobre */}
       <section className="py-14 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -63,7 +61,7 @@ export default function Perseveranca() {
                 className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4"
                 style={{ backgroundColor: `${theme.primary}15`, color: theme.primary }}
               >
-                Itapetininga · SP
+                Itapetininga, SP
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-[1.15] tracking-tight">
                 Sobre a <span style={{ color: theme.primary }}>nossa unidade</span>
@@ -115,18 +113,15 @@ export default function Perseveranca() {
               transition={{ duration: 0.6 }}
               className="lg:w-1/2 relative"
             >
-              <div className="grid grid-cols-2 gap-4">
-                <img
-                  src="/fotos itape/96aaa172-46b2-4b15-b8ef-2685ee2c8b32.JPG"
-                  alt="Área externa Perseverança - piscina e jardim"
-                  className="rounded-3xl shadow-elevation-2 w-full h-72 object-cover"
-                />
-                <img
-                  src="/fotos itape/7f893f06-13f0-42b8-a41d-27a9fa726cec.JPG"
-                  alt="Espaço arborizado Perseverança"
-                  className="rounded-3xl shadow-elevation-2 w-full h-72 object-cover mt-10"
-                />
-              </div>
+              <MiniGallery
+                images={[
+                  { src: '/fotos itape/2407c852-13c8-493d-a17f-ab5d6f01ab7f.JPG', alt: 'Fachada panorâmica do Centro Terapêutico Perseverança em Itapetininga' },
+                  { src: '/fotos itape/96aaa172-46b2-4b15-b8ef-2685ee2c8b32.JPG', alt: 'Piscina e jardim do Centro Terapêutico Perseverança' },
+                  { src: '/fotos itape/7f893f06-13f0-42b8-a41d-27a9fa726cec.JPG', alt: 'Espaço arborizado do Centro Terapêutico Perseverança' },
+                  { src: '/fotos itape/87bf32b3-ea46-42b3-b124-58e7eb8ebfdc.JPG', alt: 'Lateral arborizada do Centro Terapêutico Perseverança' },
+                ]}
+                primaryColor={theme.primary}
+              />
             </motion.div>
           </div>
         </div>
@@ -234,24 +229,6 @@ export default function Perseveranca() {
         primaryDark={theme.primaryDark}
         surface={theme.surface}
         ctaColor={theme.cta}
-      />
-
-      <YouTubeSlider
-        title="Vídeos da nossa rede"
-        subtitle="Acompanhe depoimentos, conteúdos e detalhes do tratamento oferecido em todas as nossas unidades."
-        videos={clinic.videos}
-        primaryColor={theme.primary}
-        primaryDark={theme.primaryDark}
-        surface={theme.surface}
-      />
-
-      <FAQ
-        title="Dúvidas frequentes"
-        subtitle="Respostas para as principais dúvidas sobre nossa nova unidade."
-        items={clinic.faq}
-        primaryColor={theme.primary}
-        surface={theme.surface}
-        whatsappUrl={clinic.whatsappUrl}
       />
 
       {/* CTA Final */}

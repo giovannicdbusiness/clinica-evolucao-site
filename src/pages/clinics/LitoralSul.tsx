@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
 import Hero from '@/components/sections/Hero';
-import YouTubeSlider from '@/components/sections/YouTubeSlider';
 import TriagemForm from '@/components/forms/TriagemForm';
-import FAQ from '@/components/sections/FAQ';
 import Gallery from '@/components/sections/Gallery';
+import MiniGallery from '@/components/sections/MiniGallery';
 import CTABanner from '@/components/sections/CTABanner';
 import Stats from '@/components/sections/Stats';
 import {
@@ -43,8 +42,7 @@ export default function LitoralSul() {
         primaryColor={theme.primary}
         primaryDark={theme.primaryDark}
         accentColor={theme.accent}
-        badge="Espaço terapêutico beira-mar"
-        trustSignals={['Ambiente natural', 'Programa integrativo', 'Atendimento 24h']}
+        badge="Caraguatatuba, SP · Beira-mar"
       />
 
       {/* 3 destaques */}
@@ -80,7 +78,7 @@ export default function LitoralSul() {
       {/* Sobre */}
       <section className="py-14 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -89,14 +87,20 @@ export default function LitoralSul() {
               className="lg:w-1/2 relative"
             >
               <div
-                className="absolute -inset-4 rounded-3xl transform -rotate-2 opacity-[0.08]"
+                className="absolute -inset-4 rounded-3xl transform -rotate-2 opacity-[0.08] pointer-events-none"
                 style={{ backgroundColor: theme.primary }}
               />
-              <img
-                src="/fotos litoral sul/d2a34325-fe5b-4ca3-9841-194bc620b0d1.JPG"
-                alt="Unidade Litoral Sul - sala de convivência"
-                className="relative rounded-3xl shadow-elevation-3 w-full object-cover h-[460px] md:h-[520px]"
-              />
+              <div className="relative">
+                <MiniGallery
+                  images={[
+                    { src: '/fotos litoral sul/21065ed2-5fa1-437d-9a68-851a48cdf7a8.JPG', alt: 'Vista aérea da unidade Litoral Sul em Caraguatatuba' },
+                    { src: '/fotos litoral sul/35a77914-11b4-45f1-96d7-c6ffbe0a0f4b.JPG', alt: 'Fachada da unidade Litoral Sul' },
+                    { src: '/fotos litoral sul/009c4e72-9eca-4ebb-bd6c-275b8fb64bcb.JPG', alt: 'Piscina da unidade Litoral Sul' },
+                    { src: '/fotos litoral sul/d2a34325-fe5b-4ca3-9841-194bc620b0d1.JPG', alt: 'Sala de convivência da unidade Litoral Sul' },
+                  ]}
+                  primaryColor={theme.primary}
+                />
+              </div>
             </motion.div>
 
             <motion.div
@@ -110,15 +114,17 @@ export default function LitoralSul() {
                 className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4"
                 style={{ backgroundColor: `${theme.primary}15`, color: theme.primary }}
               >
-                Beira-mar
+                Caraguatatuba, SP
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-[1.15] tracking-tight">
-                Sobre a <span style={{ color: theme.primary }}>nossa unidade</span>
+                Recuperação à beira-mar em{' '}
+                <span style={{ color: theme.primary }}>Caraguatatuba</span>
               </h2>
               <div className="space-y-5 text-gray-600 text-base md:text-lg leading-relaxed">
                 <p>
-                  Um espaço terapêutico onde o som do mar e o contato direto com a natureza
-                  compõem parte fundamental do processo de cura.
+                  Localizada em <strong>Caraguatatuba, no litoral norte de São Paulo</strong>,
+                  nossa unidade é um espaço terapêutico onde o som do mar e o contato direto com a
+                  natureza compõem parte fundamental do processo de cura.
                 </p>
                 <p>
                   Combinamos um programa terapêutico estruturado com práticas integrativas,
@@ -197,24 +203,6 @@ export default function LitoralSul() {
         primaryDark={theme.primaryDark}
         surface={theme.surface}
         ctaColor={theme.cta}
-      />
-
-      <YouTubeSlider
-        title="Vídeos da nossa rede"
-        subtitle="Conheça mais sobre o trabalho desenvolvido nas unidades da nossa rede de clínicas."
-        videos={clinic.videos}
-        primaryColor={theme.primary}
-        primaryDark={theme.primaryDark}
-        surface={theme.surface}
-      />
-
-      <FAQ
-        title="Dúvidas frequentes"
-        subtitle="Tire as principais dúvidas sobre o tratamento, a estrutura e o funcionamento do espaço."
-        items={clinic.faq}
-        primaryColor={theme.primary}
-        surface={theme.surface}
-        whatsappUrl={clinic.whatsappUrl}
       />
 
       {/* CTA Final */}

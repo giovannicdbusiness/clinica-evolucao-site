@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Hero from '@/components/sections/Hero';
 import Gallery from '@/components/sections/Gallery';
+import MiniGallery from '@/components/sections/MiniGallery';
 import CTABanner from '@/components/sections/CTABanner';
 import {
   Home as HomeIcon,
@@ -67,8 +68,7 @@ export default function EspacoTerapeutico() {
         primaryColor={theme.primary}
         primaryDark={theme.primaryDark}
         accentColor={theme.accent}
-        badge="Moradia Assistida · Estrutura completa"
-        trustSignals={['Cuidado 24h', 'Equipe especializada', 'Ambiente acolhedor']}
+        badge="São Bernardo do Campo, SP · Moradia Assistida"
       />
 
       {/* Quick highlights — 2 pilares (Moradia + Estrutura), reforçando o foco da página */}
@@ -120,7 +120,7 @@ export default function EspacoTerapeutico() {
       {/* Seção 1 — Moradia Assistida */}
       <section id="moradia" className="py-20 md:py-28 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-20">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 mb-20">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -132,7 +132,7 @@ export default function EspacoTerapeutico() {
                 className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-5"
                 style={{ backgroundColor: `${theme.primary}15`, color: theme.primary }}
               >
-                Moradia Assistida
+                São Bernardo do Campo, SP
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-[1.1] text-gray-900 tracking-tight">
                 Um lar terapêutico para{' '}
@@ -140,8 +140,9 @@ export default function EspacoTerapeutico() {
               </h2>
               <div className="space-y-5 text-gray-600 text-base md:text-lg leading-relaxed">
                 <p>
-                  Mais do que uma estrutura: a Moradia Terapêutica Assistida é um espaço onde o
-                  cuidado profissional encontra a serenidade de um lar. Cada detalhe é pensado para
+                  Em <strong>São Bernardo do Campo</strong>, nosso Espaço Terapêutico é mais do
+                  que uma estrutura: a Moradia Terapêutica Assistida é um espaço onde o cuidado
+                  profissional encontra a serenidade de um lar. Cada detalhe é pensado para
                   promover autonomia, bem-estar e o resgate da rotina.
                 </p>
                 <p>
@@ -175,16 +176,23 @@ export default function EspacoTerapeutico() {
               className="lg:w-1/2 relative"
             >
               <div
-                className="absolute -inset-4 rounded-3xl transform rotate-2 opacity-[0.08]"
+                className="absolute -inset-4 rounded-3xl transform rotate-2 opacity-[0.08] pointer-events-none"
                 style={{ backgroundColor: theme.primary }}
               />
-              <img
-                src="/todos rede evolucao principal/0bd1ec12-cfcc-424d-bc8b-50aadeb5aeb8.JPG"
-                alt="Moradia Terapêutica Assistida — área externa com piscina"
-                className="relative rounded-3xl shadow-elevation-3 w-full object-cover h-[480px] md:h-[560px]"
-              />
+              <div className="relative">
+                <MiniGallery
+                  heightClass="h-[400px] md:h-[560px]"
+                  images={[
+                    { src: '/todos rede evolucao principal/0bd1ec12-cfcc-424d-bc8b-50aadeb5aeb8.JPG', alt: 'Área externa com piscina do Espaço Terapêutico' },
+                    { src: '/todos rede evolucao principal/29d99765-e6c0-45f1-8600-63ac763ba507.JPG', alt: 'Sala de convivência do Espaço Terapêutico' },
+                    { src: '/todos rede evolucao principal/79889e60-5f7e-4649-b8f3-3f8d88e09c44.JPG', alt: 'Ambiente integrado do Espaço Terapêutico' },
+                    { src: '/todos rede evolucao principal/0c05d0f7-fd45-48ef-9fe1-1e62886c5a64.JPG', alt: 'Acomodações do Espaço Terapêutico' },
+                  ]}
+                  primaryColor={theme.primary}
+                />
+              </div>
               <div
-                className="absolute -bottom-6 -left-2 md:-left-6 bg-white px-5 py-4 rounded-2xl shadow-elevation-3 flex items-center gap-3 border border-gray-100"
+                className="absolute -bottom-6 -left-2 md:-left-6 bg-white px-5 py-4 rounded-2xl shadow-elevation-3 flex items-center gap-3 border border-gray-100 z-10"
               >
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center text-white shadow-sm"

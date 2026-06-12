@@ -179,20 +179,6 @@ export default function Layout() {
                 )}
               </div>
 
-              {[
-                { href: '#triagem', label: 'Triagem' },
-                { href: '#youtube', label: 'Vídeos' },
-                { href: '#estruturas', label: 'Estrutura' },
-              ].map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  className="px-3 py-2 rounded-md font-semibold transition-colors text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 cursor-pointer"
-                >
-                  {l.label}
-                </a>
-              ))}
-
               <a
                 href={clinic.whatsappUrl}
                 target="_blank"
@@ -250,23 +236,6 @@ export default function Layout() {
               })}
 
               <div className="border-t border-gray-100 my-3" />
-
-              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 px-3 pb-2">
-                Navegação
-              </p>
-              {[
-                { href: '#triagem', label: 'Triagem' },
-                { href: '#youtube', label: 'Vídeos' },
-                { href: '#estruturas', label: 'Estrutura' },
-              ].map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  className="block px-3 py-3 rounded-xl text-base font-medium text-gray-700 hover:bg-gray-50 cursor-pointer"
-                >
-                  {l.label}
-                </a>
-              ))}
 
               <a
                 href={clinic.whatsappUrl}
@@ -388,18 +357,6 @@ export default function Layout() {
                     </Link>
                   </li>
                 ))}
-                <li>
-                  <a
-                    href="#triagem"
-                    className="hover:text-white transition-colors flex items-center gap-2 group cursor-pointer"
-                  >
-                    <ArrowRight
-                      size={12}
-                      className="opacity-60 group-hover:translate-x-1 transition-transform"
-                    />
-                    Triagem online
-                  </a>
-                </li>
               </ul>
             </div>
 

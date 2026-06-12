@@ -45,7 +45,7 @@ export default function Hero({
   };
 
   return (
-    <div className="relative h-[88vh] min-h-[640px] flex items-center justify-center overflow-hidden">
+    <div className="relative h-[78vh] min-h-[520px] md:h-[88vh] md:min-h-[640px] flex items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -84,14 +84,14 @@ export default function Hero({
 
           <motion.h1
             variants={item}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6 tracking-tight"
+            className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-4 md:mb-6 tracking-tight"
           >
             {title}
           </motion.h1>
 
           <motion.p
             variants={item}
-            className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed max-w-xl"
+            className="text-base md:text-xl text-white/90 mb-8 md:mb-10 leading-relaxed max-w-xl"
           >
             {subtitle}
           </motion.p>
