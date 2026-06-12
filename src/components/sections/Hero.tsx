@@ -48,7 +48,7 @@ export default function Hero({
     <div className="relative h-[78vh] min-h-[520px] md:h-[88vh] md:min-h-[640px] flex items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
+        style={{ backgroundImage: `url("${encodeURI(backgroundImage)}")` }}
       >
         {/* Layered overlays for richer contrast */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-transparent" />
