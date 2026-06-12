@@ -373,7 +373,7 @@ export const clinics = {
     heroTitle: 'O melhor tratamento para dependência química e alcoolismo.',
     heroSubtitle:
       'Nossos tratamentos já libertaram mais de 1.000 pessoas que buscaram nossa ajuda. Equipe multidisciplinar, ambiente seguro e atendimento individualizado.',
-    heroImage: '/fotos unidade vargem grande/649b5ef0-738f-409e-9ab0-173574983117.JPG',
+    heroImage: '/fotos unidade vargem grande/6e8a9363-0fea-4552-bcf8-e9cf52c5552c.JPG',
     whatsapp: PHONE,
     whatsappMessage: 'Olá! Vim pelo site da unidade Vargem Grande Paulista Paulista e gostaria de mais informações.',
     whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site da unidade Vargem Grande Paulista Paulista e gostaria de mais informações.'),
