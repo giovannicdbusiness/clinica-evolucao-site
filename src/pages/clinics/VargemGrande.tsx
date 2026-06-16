@@ -71,7 +71,7 @@ export default function VargemGrande() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.6 }}
-              className="lg:w-1/2"
+              className="w-full lg:w-1/2"
             >
               <span
                 className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4"
@@ -127,7 +127,7 @@ export default function VargemGrande() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.6 }}
-              className="lg:w-1/2 relative"
+              className="w-full lg:w-1/2 relative"
             >
               <div
                 className="absolute -inset-4 rounded-3xl transform rotate-2 opacity-[0.08] pointer-events-none"
