@@ -33,10 +33,10 @@ mãe, a esposa, o irmão. Está em crise, no celular, e precisa falar com algué
 Isso definiu o projeto inteiro. Não é um site pra ser bonito e ser lido, é um site pra
 tirar a pessoa da dúvida e colocar ela numa conversa. Todo o resto foi decisão de suporte:
 
-- **Contato a um toque de qualquer lugar** — WhatsApp e telefone fixos na tela, topo e flutuante
-- **Tom acolhedor, sem estigma** — “Aqui, você não está sozinho”, não “tratamento para dependentes”
-- **Prova antes de pedir o passo** — fotos reais das unidades, vídeos do canal, FAQ que responde o que trava a decisão
-- **Sigilo dito explicitamente** — “atendimento confidencial” aparece antes do formulário, porque é a objeção nº 1
+- **Contato a um toque de qualquer lugar**: WhatsApp e telefone fixos na tela, topo e flutuante
+- **Tom acolhedor, sem estigma**: “Aqui, você não está sozinho”, não “tratamento para dependentes”
+- **Prova antes de pedir o passo**: fotos reais das unidades, vídeos do canal, FAQ que responde o que trava a decisão
+- **Sigilo dito explicitamente**: “atendimento confidencial” aparece antes do formulário, porque é a objeção nº 1
 
 ---
 
@@ -53,7 +53,7 @@ canal que ela já usa, e a família não precisa repetir a história do zero.
 </div>
 
 ```ts
-// TriagemForm.tsx — cada unidade tem o próprio número
+// TriagemForm.tsx: cada unidade tem o próprio número
 const url = `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(message)}`;
 ```
 
@@ -86,9 +86,9 @@ export interface Clinic {
 | Rota | Unidade |
 | --- | --- |
 | `/` | Rede Evolução (marca-mãe) |
-| `/espaco-terapeutico` | Espaço Terapêutico Evolução — São Bernardo do Campo, SP |
-| `/perseveranca` | Centro Terapêutico Perseverança — Itapetininga, SP |
-| `/litoral-sul` | Litoral Sul — Caraguatatuba, SP |
+| `/espaco-terapeutico` | Espaço Terapêutico Evolução, São Bernardo do Campo, SP |
+| `/perseveranca` | Centro Terapêutico Perseverança, Itapetininga, SP |
+| `/litoral-sul` | Litoral Sul, Caraguatatuba, SP |
 | `/vargem-grande` | Vargem Grande Paulista, SP |
 
 O tema é aplicado por CSS custom properties, então o mesmo componente se pinta com a cor
@@ -123,7 +123,7 @@ causa de um vídeo.
 
 | | |
 | --- | --- |
-| **Contadores animados** | `CountUp` dispara na entrada em viewport, não no load — o número sobe quando você chega nele |
+| **Contadores animados** | `CountUp` dispara na entrada em viewport, não no load. O número sobe quando você chega nele |
 | **Galeria com lightbox** | navegação por teclado, trap de foco, fecha no `Esc` |
 | **Carrossel de fotos** | Embla, arrasto nativo no touch, sem bibliotecas pesadas |
 | **FAQ em acordeão** | animação de altura com Framer Motion, um aberto por vez |
@@ -153,7 +153,7 @@ npm run lint      # tsc --noEmit
 
 ```
 src/
-├── data/clinics.ts        as 5 marcas, tipadas — fonte única de verdade
+├── data/clinics.ts        as 5 marcas, tipadas: fonte única de verdade
 ├── pages/
 │   ├── Home.tsx           a rede
 │   └── clinics/           uma página por unidade
