@@ -115,10 +115,10 @@ export default function Perseveranca() {
             >
               <MiniGallery
                 images={[
-                  { src: '/fotos itape/2407c852-13c8-493d-a17f-ab5d6f01ab7f.JPG', alt: 'Fachada panorâmica do Centro Terapêutico Perseverança em Itapetininga' },
-                  { src: '/fotos itape/96aaa172-46b2-4b15-b8ef-2685ee2c8b32.JPG', alt: 'Piscina e jardim do Centro Terapêutico Perseverança' },
-                  { src: '/fotos itape/7f893f06-13f0-42b8-a41d-27a9fa726cec.JPG', alt: 'Espaço arborizado do Centro Terapêutico Perseverança' },
-                  { src: '/fotos itape/87bf32b3-ea46-42b3-b124-58e7eb8ebfdc.JPG', alt: 'Lateral arborizada do Centro Terapêutico Perseverança' },
+                  { src: '/fotos itape/itape-01.jpeg', alt: 'Fachada do Centro Terapêutico Perseverança em Itapetininga' },
+                  { src: '/fotos itape/itape-02.jpeg', alt: 'Piscina e área externa do Centro Terapêutico Perseverança' },
+                  { src: '/fotos itape/itape-04.jpeg', alt: 'Varanda coberta do Centro Terapêutico Perseverança' },
+                  { src: '/fotos itape/itape-08.jpeg', alt: 'Quarto do Centro Terapêutico Perseverança' },
                 ]}
                 primaryColor={theme.primary}
               />

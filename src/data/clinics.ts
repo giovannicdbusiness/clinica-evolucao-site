@@ -115,12 +115,14 @@ const galleryEvolucao = buildGallery(
 const galleryPerseveranca = buildGallery(
   'fotos itape',
   [
-    '2407c852-13c8-493d-a17f-ab5d6f01ab7f.JPG',
-    '7f893f06-13f0-42b8-a41d-27a9fa726cec.JPG',
-    '87bf32b3-ea46-42b3-b124-58e7eb8ebfdc.JPG',
-    '8d812797-b651-40a3-a68d-10fa83984536.JPG',
-    '96aaa172-46b2-4b15-b8ef-2685ee2c8b32.JPG',
-    'c905bcb1-2a3f-4ea3-9c56-96bead049c41.JPG',
+    'itape-01.jpeg',
+    'itape-02.jpeg',
+    'itape-03.jpeg',
+    'itape-04.jpeg',
+    'itape-05.jpeg',
+    'itape-06.jpeg',
+    'itape-07.jpeg',
+    'itape-08.jpeg',
   ],
   'Centro Terapêutico Perseverança',
 );
