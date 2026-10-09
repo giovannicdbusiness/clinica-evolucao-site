@@ -88,7 +88,7 @@ export interface Clinic {
 | `/` | Rede Evolução (marca-mãe) |
 | `/espaco-terapeutico` | Espaço Terapêutico Evolução, São Bernardo do Campo, SP |
 | `/perseveranca` | Centro Terapêutico Perseverança, Itapetininga, SP |
-| `/litoral-sul` | Litoral Sul, Caraguatatuba, SP |
+| `/litoral-norte` | Litoral Norte, Caraguatatuba, SP |
 | `/vargem-grande` | Vargem Grande Paulista, SP |
 
 O tema é aplicado por CSS custom properties, então o mesmo componente se pinta com a cor

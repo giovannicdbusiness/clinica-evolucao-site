@@ -18,8 +18,8 @@ import {
 } from 'lucide-react';
 import { clinics } from '@/data/clinics';
 
-export default function LitoralSul() {
-  const clinic = clinics['litoral-sul'];
+export default function LitoralNorte() {
+  const clinic = clinics['litoral-norte'];
   const { theme } = clinic;
 
   const stats = [
@@ -93,10 +93,10 @@ export default function LitoralSul() {
               <div className="relative">
                 <MiniGallery
                   images={[
-                    { src: '/fotos litoral sul/21065ed2-5fa1-437d-9a68-851a48cdf7a8.JPG', alt: 'Vista aérea da unidade Litoral Sul em Caraguatatuba' },
-                    { src: '/fotos litoral sul/35a77914-11b4-45f1-96d7-c6ffbe0a0f4b.JPG', alt: 'Fachada da unidade Litoral Sul' },
-                    { src: '/fotos litoral sul/009c4e72-9eca-4ebb-bd6c-275b8fb64bcb.JPG', alt: 'Piscina da unidade Litoral Sul' },
-                    { src: '/fotos litoral sul/d2a34325-fe5b-4ca3-9841-194bc620b0d1.JPG', alt: 'Sala de convivência da unidade Litoral Sul' },
+                    { src: '/fotos litoral norte/21065ed2-5fa1-437d-9a68-851a48cdf7a8.JPG', alt: 'Vista aérea da unidade Litoral Norte em Caraguatatuba' },
+                    { src: '/fotos litoral norte/35a77914-11b4-45f1-96d7-c6ffbe0a0f4b.JPG', alt: 'Fachada da unidade Litoral Norte' },
+                    { src: '/fotos litoral norte/009c4e72-9eca-4ebb-bd6c-275b8fb64bcb.JPG', alt: 'Piscina da unidade Litoral Norte' },
+                    { src: '/fotos litoral norte/d2a34325-fe5b-4ca3-9841-194bc620b0d1.JPG', alt: 'Sala de convivência da unidade Litoral Norte' },
                   ]}
                   primaryColor={theme.primary}
                 />

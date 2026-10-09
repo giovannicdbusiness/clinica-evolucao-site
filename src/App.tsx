@@ -3,7 +3,7 @@ import Layout from '@/components/layout/Layout';
 import Home from '@/pages/Home';
 import EspacoTerapeutico from '@/pages/clinics/EspacoTerapeutico';
 import Perseveranca from '@/pages/clinics/Perseveranca';
-import LitoralSul from '@/pages/clinics/LitoralSul';
+import LitoralNorte from '@/pages/clinics/LitoralNorte';
 import VargemGrande from '@/pages/clinics/VargemGrande';
 
 export default function App() {
@@ -14,7 +14,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="espaco-terapeutico" element={<EspacoTerapeutico />} />
           <Route path="perseveranca" element={<Perseveranca />} />
-          <Route path="litoral-sul" element={<LitoralSul />} />
+          <Route path="litoral-norte" element={<LitoralNorte />} />
           <Route path="vargem-grande" element={<VargemGrande />} />
         </Route>
       </Routes>

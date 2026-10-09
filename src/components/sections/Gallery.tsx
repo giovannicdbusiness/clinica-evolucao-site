@@ -28,7 +28,7 @@ export default function Gallery({
   primaryColor = '#5A9EA8',
   ctaColor = '#F59E0B',
   ctaDark = '#D97706',
-  ctaUrl = 'https://wa.me/5515998271753',
+  ctaUrl = 'https://wa.me/5511919271919',
   ctaText = 'CONHEÇA NOSSAS ESTRUTURAS',
   surface = '#F4F4F0',
   eyebrow = 'Nossa estrutura',

@@ -47,8 +47,8 @@ export interface Clinic {
   faq: ClinicFAQItem[];
 }
 
-const PHONE = '5515998271753';
-const PHONE_DISPLAY = '(15) 99827-1753';
+const PHONE = '5511919271919';
+const PHONE_DISPLAY = '(11) 91927-1919';
 const EMAIL = 'evolucaoprime@gmail.com';
 
 function makeWhatsAppUrl(message: string): string {
@@ -125,8 +125,8 @@ const galleryPerseveranca = buildGallery(
   'Centro Terapêutico Perseverança',
 );
 
-const galleryLitoralSul = buildGallery(
-  'fotos litoral sul',
+const galleryLitoralNorte = buildGallery(
+  'fotos litoral norte',
   [
     '35a77914-11b4-45f1-96d7-c6ffbe0a0f4b.JPG',
     '42888e7e-6ef8-4425-9637-008c47269d21.JPG',
@@ -142,7 +142,7 @@ const galleryLitoralSul = buildGallery(
     '009c4e72-9eca-4ebb-bd6c-275b8fb64bcb.JPG',
     '21065ed2-5fa1-437d-9a68-851a48cdf7a8.JPG',
   ],
-  'Unidade Litoral Sul',
+  'Unidade Litoral Norte',
 );
 
 const galleryVargemGrande = buildGallery(
@@ -309,11 +309,11 @@ export const clinics = {
     ],
   } as Clinic,
 
-  'litoral-sul': {
-    slug: 'litoral-sul',
-    path: '/litoral-sul',
-    brand: 'LITORAL SUL',
-    shortName: 'Unidade Litoral Sul',
+  'litoral-norte': {
+    slug: 'litoral-norte',
+    path: '/litoral-norte',
+    brand: 'LITORAL NORTE',
+    shortName: 'Unidade Litoral Norte',
     region: 'Caraguatatuba, SP',
     city: 'Caraguatatuba, SP',
     tagline: 'Recuperação em harmonia com a natureza',
@@ -322,8 +322,8 @@ export const clinics = {
       'Em Caraguatatuba, no litoral norte de São Paulo, um espaço terapêutico beira-mar onde a natureza e o cuidado profissional se unem para promover renovação física, emocional e espiritual.',
     heroImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
     whatsapp: PHONE,
-    whatsappMessage: 'Olá! Vim pelo site da unidade Litoral Sul e gostaria de mais informações.',
-    whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site da unidade Litoral Sul e gostaria de mais informações.'),
+    whatsappMessage: 'Olá! Vim pelo site da unidade Litoral Norte e gostaria de mais informações.',
+    whatsappUrl: makeWhatsAppUrl('Olá! Vim pelo site da unidade Litoral Norte e gostaria de mais informações.'),
     phoneDisplay: PHONE_DISPLAY,
     email: EMAIL,
     instagram: 'https://www.instagram.com/redevolucao',
@@ -337,12 +337,12 @@ export const clinics = {
       initial: 'L',
     },
     videos: pick([2, 0, 3, 1]),
-    gallery: galleryLitoralSul,
+    gallery: galleryLitoralNorte,
     faq: [
       {
         question: 'Quanto tempo é indicado o tratamento?',
         answer:
-          'Cada caso é único. Na unidade Litoral Sul o tratamento pode variar de 90 a 180 dias, e a recuperação é um processo contínuo que segue mesmo após a alta, com acompanhamento ambulatorial e apoio familiar.',
+          'Cada caso é único. Na unidade Litoral Norte o tratamento pode variar de 90 a 180 dias, e a recuperação é um processo contínuo que segue mesmo após a alta, com acompanhamento ambulatorial e apoio familiar.',
       },
       {
         question: 'Posso obrigar meu filho a se internar? Como funciona legalmente?',
@@ -352,7 +352,7 @@ export const clinics = {
       {
         question: 'O que ele(a) vai fazer durante o tratamento?',
         answer:
-          'A rotina na Litoral Sul inclui terapias individuais e em grupo, atividades físicas, oficinas, acompanhamento espiritual ou motivacional, além de momentos de lazer à beira-mar, sempre supervisionados pela equipe.',
+          'A rotina no Litoral Norte inclui terapias individuais e em grupo, atividades físicas, oficinas, acompanhamento espiritual ou motivacional, além de momentos de lazer à beira-mar, sempre supervisionados pela equipe.',
       },
       {
         question: 'Quais são as chances reais de recuperação e como evitar recaídas depois da alta?',
@@ -420,7 +420,7 @@ export const clinicList: Clinic[] = [
   clinics.evolucao,
   clinics['espaco-terapeutico'],
   clinics.perseveranca,
-  clinics['litoral-sul'],
+  clinics['litoral-norte'],
   clinics['vargem-grande'],
 ];
 
@@ -428,7 +428,7 @@ export const clinicList: Clinic[] = [
 export const unitsForHub: Clinic[] = [
   clinics['espaco-terapeutico'],
   clinics.perseveranca,
-  clinics['litoral-sul'],
+  clinics['litoral-norte'],
   clinics['vargem-grande'],
 ];
 
